@@ -1,1 +1,1 @@
-# 9794-AS
+# Repositório destinado a armazenar os arquivos do projeto de Arquitetura de Software

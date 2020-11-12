@@ -1,10 +1,10 @@
+library rflutter_alert;
+
 import 'package:flutter/material.dart';
+import 'package:iClothes/Models/usuario.dart';
+import 'package:rflutter_alert/rflutter_alert.dart';
 
-import '../Models/usuario.dart';
-
-void main() => runApp(MyApp());
-
-class MyApp extends StatelessWidget {
+class ViewCadastroUsuario extends StatelessWidget {
   final TextEditingController _controladorNome = TextEditingController();
   final TextEditingController _controladorEmail = TextEditingController();
   final TextEditingController _controladorTel = TextEditingController();
@@ -111,7 +111,26 @@ class MyApp extends StatelessWidget {
                     final Usuario usuarioNovo =
                         Usuario(nome, email, telefone, cpf, endereco, senha);
 
-                    print(usuarioNovo);
+                    if (Usuario != null) {
+                      Alert(
+                        context: context,
+                        type: AlertType.error,
+                        title: "Bem Vindo!",
+                        desc: "Conta criada com sucesso.",
+                        buttons: [
+                          DialogButton(
+                            child: Text(
+                              "OK",
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 20),
+                            ),
+                            onPressed: () => Navigator.pop(context),
+                            width: 120,
+                          )
+                        ],
+                      ).show();
+                      print(usuarioNovo);
+                    }
                   },
                 ),
               ),

@@ -17,7 +17,10 @@ class ViewCadastroUsuario extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Cadastro de Usuário'),
+          centerTitle: true,
+          title: Text(
+            'Cadastro de Usuário',
+          ),
         ),
         body: Padding(
           padding: const EdgeInsets.all(16.0),
@@ -114,7 +117,7 @@ class ViewCadastroUsuario extends StatelessWidget {
                     if (Usuario != null) {
                       Alert(
                         context: context,
-                        type: AlertType.error,
+                        type: AlertType.success,
                         title: "Bem Vindo!",
                         desc: "Conta criada com sucesso.",
                         buttons: [

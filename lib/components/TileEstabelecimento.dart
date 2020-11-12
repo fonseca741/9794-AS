@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_iclothes/models/Estabelecimento.dart';
-import 'package:flutter_iclothes/provider/providerEstabelecimentos.dart';
-import 'package:flutter_iclothes/routes/app_routes.dart';
+import 'package:iclothes/models/Estabelecimento.dart';
+import 'package:iclothes/provider/providerEstabelecimentos.dart';
+import 'package:iclothes/routes/app_routes.dart';
 import 'package:provider/provider.dart';
 
 class TileEstabelecimento extends StatelessWidget {

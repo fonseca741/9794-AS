@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_iclothes/provider/providerEstabelecimentos.dart';
-import 'package:flutter_iclothes/routes/app_routes.dart';
-import 'package:flutter_iclothes/views/ListEstabelecimentos.dart';
-import 'package:flutter_iclothes/views/estabelecimento-forms.dart';
+import 'package:iclothes/routes/app_routes.dart';
+import 'package:iclothes/views/ListEstabelecimentos.dart';
+import 'package:iclothes/provider/providerEstabelecimentos.dart';
+import 'package:iclothes/views/Home.dart';
+import 'package:iclothes/views/CadastroEstabelecimentos.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -26,7 +27,8 @@ class MyApp extends StatelessWidget {
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
         routes: {
-          AppRoutes.HOME: (_) => ListEstabelecimentos(),
+          AppRoutes.HOME: (_) => Home(),
+          AppRoutes.LIST_ESTABELECIMENTOS: (_) => ListEstabelecimentos(),
           AppRoutes.ESTABELECIMENTOS_FORMS: (_) => EstabelecimentoForms()
         },
       ),

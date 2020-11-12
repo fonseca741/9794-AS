@@ -1,8 +1,8 @@
 import 'dart:math';
 
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_iclothes/data/dummy_estabelecimentos.dart';
-import 'package:flutter_iclothes/models/Estabelecimento.dart';
+import 'package:iclothes/data/dummy_estabelecimentos.dart';
+import 'package:iclothes/models/Estabelecimento.dart';
 
 class ProviderEstabelecimentos with ChangeNotifier {
   Map<String, Estabelecimento> _items = {...ESTABELECIMENTOS};

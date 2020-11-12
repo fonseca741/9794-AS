@@ -1,4 +1,4 @@
-import 'package:flutter_iclothes/models/Estabelecimento.dart';
+import 'package:iclothes/models/Estabelecimento.dart';
 
 const ESTABELECIMENTOS = {
   '1': const Estabelecimento(

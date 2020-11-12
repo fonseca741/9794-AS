@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_iclothes/components/TileEstabelecimento.dart';
-import 'package:flutter_iclothes/provider/providerEstabelecimentos.dart';
-import 'package:flutter_iclothes/routes/app_routes.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:iclothes/routes/app_routes.dart';
+import 'package:iclothes/components/TileEstabelecimento.dart';
+import 'package:iclothes/provider/providerEstabelecimentos.dart';
 import 'package:provider/provider.dart';
 
-class ListEstabelecimentos extends StatelessWidget {
+class ListEstabelecimentos extends StatefulWidget {
+  @override
+  _ListEstabelecimentosState createState() => _ListEstabelecimentosState();
+}
+
+class _ListEstabelecimentosState extends State<ListEstabelecimentos> {
   @override
   Widget build(BuildContext context) {
     final ProviderEstabelecimentos estabelecimentos = Provider.of(context);
@@ -34,37 +38,6 @@ class ListEstabelecimentos extends StatelessWidget {
           itemCount: estabelecimentos.count,
           itemBuilder: (ctx, i) =>
               TileEstabelecimento(estabelecimentos.byIndex(i))),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.shopping_cart,
-            ),
-            label: 'Lojas',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.search,
-            ),
-            label: 'Procurar',
-          ),
-          BottomNavigationBarItem(
-            icon: FaIcon(FontAwesomeIcons.ticketAlt),
-            label: 'Pedidos',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.account_circle,
-            ),
-            label: 'Perfil',
-          ),
-        ],
-        //currentIndex: _selectedIndex,
-        selectedItemColor: Color(0xffe63946),
-        unselectedItemColor: Color(0xff457b9d),
-        showUnselectedLabels: true,
-        //onTap: _onItemTapped,
-      ),
     );
   }
 }

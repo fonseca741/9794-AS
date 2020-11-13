@@ -1,1 +1,1 @@
-# Repositório destinado a armazenar os arquivos do projeto de Arquitetura de Software
+Repositório destinado a armazenar os arquivos do projeto de Arquitetura de Software

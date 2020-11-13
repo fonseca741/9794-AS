@@ -1,4 +1,4 @@
-import 'package:iclothes/models/Estabelecimento.dart';
+import 'package:iclothes/models/estabelecimento.dart';
 
 const ESTABELECIMENTOS = {
   '1': const Estabelecimento(

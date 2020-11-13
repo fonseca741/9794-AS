@@ -4,12 +4,13 @@ import 'package:iclothes/components/TileEstabelecimento.dart';
 import 'package:iclothes/provider/providerEstabelecimentos.dart';
 import 'package:provider/provider.dart';
 
-class ListEstabelecimentos extends StatefulWidget {
+class ViewListEstabelecimento extends StatefulWidget {
   @override
-  _ListEstabelecimentosState createState() => _ListEstabelecimentosState();
+  _ViewListEstabelecimentoState createState() =>
+      _ViewListEstabelecimentoState();
 }
 
-class _ListEstabelecimentosState extends State<ListEstabelecimentos> {
+class _ViewListEstabelecimentoState extends State<ViewListEstabelecimento> {
   @override
   Widget build(BuildContext context) {
     final ProviderEstabelecimentos estabelecimentos = Provider.of(context);
@@ -19,6 +20,7 @@ class _ListEstabelecimentosState extends State<ListEstabelecimentos> {
           'Lista de Estabelecimentos',
           style: TextStyle(
             color: Colors.white,
+            fontSize: 22,
           ),
         ),
         centerTitle: true,

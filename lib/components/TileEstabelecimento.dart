@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:iclothes/models/Estabelecimento.dart';
+import 'package:iclothes/models/estabelecimento.dart';
 import 'package:iclothes/provider/providerEstabelecimentos.dart';
 import 'package:iclothes/routes/app_routes.dart';
 import 'package:provider/provider.dart';
@@ -20,8 +20,14 @@ class TileEstabelecimento extends StatelessWidget {
     );
     return ListTile(
       leading: fotoEstab,
-      title: Text(estabelecimento.nome),
-      subtitle: Text(estabelecimento.endereco),
+      title: Text(
+        estabelecimento.nome,
+        style: TextStyle(fontSize: 18),
+      ),
+      subtitle: Text(
+        estabelecimento.endereco,
+        style: TextStyle(fontSize: 14),
+      ),
       trailing: Container(
         width: 100,
         child: Row(

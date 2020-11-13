@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:iclothes/models/Estabelecimento.dart';
-import 'package:iclothes/provider/providerEstabelecimentos.dart';
-import 'package:provider/provider.dart';
+import 'package:iclothes/models/estabelecimento.dart';
+// import 'package:iclothes/provider/providerEstabelecimentos.dart';
+// import 'package:provider/provider.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 
-class EstabelecimentoForms extends StatefulWidget {
+class ViewCadastroEstabelecimento extends StatefulWidget {
   @override
-  _EstabelecimentoFormsState createState() => _EstabelecimentoFormsState();
+  _ViewCadastroEstabelecimentoState createState() =>
+      _ViewCadastroEstabelecimentoState();
 }
 
-class _EstabelecimentoFormsState extends State<EstabelecimentoForms> {
+class _ViewCadastroEstabelecimentoState
+    extends State<ViewCadastroEstabelecimento> {
   final _form = GlobalKey<FormState>();
 
   final Map<String, Object> _formData = {};
@@ -26,36 +28,35 @@ class _EstabelecimentoFormsState extends State<EstabelecimentoForms> {
   }
 
   void cadastrar() {
-    if (_form.currentState.validate()) {
-      _form.currentState.save();
-      Provider.of<ProviderEstabelecimentos>(context, listen: false).put(
-        Estabelecimento(
-          id: _formData['id'],
-          nome: _formData['nome'],
-          telefone: _formData['tel'],
-          endereco: _formData['end'],
-          email: _formData['email'],
-          senha: _formData['senha'],
-        ),
-      );
-      Alert(
-        context: context,
-        type: AlertType.success,
-        title: "Bem Vindo!",
-        desc: "Conta criada com sucesso.",
-        buttons: [
-          DialogButton(
-            child: Text(
-              "OK",
-              style: TextStyle(color: Colors.white, fontSize: 20),
-            ),
-            onPressed: () => Navigator.pop(context),
-            width: 120,
-          )
-        ],
-      ).show();
-      Navigator.of(context).pop(); //Volta pro Login
-    }
+    // if (_form.currentState.validate()) {
+    //   _form.currentState.save();
+    //   Provider.of<ProviderEstabelecimentos>(context, listen: false).put(
+    //     Estabelecimento(
+    //       id: _formData['id'],
+    //       nome: _formData['nome'],
+    //       telefone: _formData['tel'],
+    //       endereco: _formData['end'],
+    //       email: _formData['email'],
+    //       senha: _formData['senha'],
+    //     ),
+    //   );
+    Alert(
+      context: context,
+      type: AlertType.success,
+      title: "Bem Vindo!",
+      desc: "Conta criada com sucesso.",
+      buttons: [
+        DialogButton(
+          child: Text(
+            "OK",
+            style: TextStyle(color: Colors.white, fontSize: 20),
+          ),
+          onPressed: () => Navigator.pop(context),
+          width: 120,
+        )
+      ],
+    ).show();
+    Navigator.of(context).pop(); //Volta pro Login
   }
 
   @override
@@ -69,6 +70,7 @@ class _EstabelecimentoFormsState extends State<EstabelecimentoForms> {
             'Cadastro de Estabelecimento',
             style: TextStyle(
               color: Colors.white,
+              fontSize: 22,
             ),
           ),
           centerTitle: true,

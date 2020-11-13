@@ -10,11 +10,17 @@ class ViewSac extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-            centerTitle: true,
-            title: Text(
-              'Atendimento',
-              style: TextStyle(fontFamily: 'Satisfy', fontSize: 35),
-            )),
+          centerTitle: true,
+          title: Text(
+            'Atendimento',
+            style: TextStyle(fontFamily: 'Satisfy', fontSize: 35),
+          ),
+          automaticallyImplyLeading: true,
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back_outlined),
+            onPressed: () => Navigator.pop(context),
+          ),
+        ),
         body: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Column(

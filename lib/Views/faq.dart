@@ -13,6 +13,11 @@ class ViewFaq extends StatelessWidget {
         appBar: AppBar(
           title: const Text(_title),
           centerTitle: true,
+          automaticallyImplyLeading: true,
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back_outlined),
+            onPressed: () => Navigator.pop(context),
+          ),
         ),
         body: ViewFaqBody(),
       ),

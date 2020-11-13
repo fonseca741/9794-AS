@@ -22,6 +22,11 @@ class ViewCadastroUsuario extends StatelessWidget {
             'Cadastro de Usuário',
             style: TextStyle(fontFamily: 'Satisfy', fontSize: 35),
           ),
+          automaticallyImplyLeading: true,
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back_outlined),
+            onPressed: () => Navigator.pop(context),
+          ),
         ),
         body: Padding(
           padding: const EdgeInsets.all(16.0),

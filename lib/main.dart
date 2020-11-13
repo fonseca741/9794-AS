@@ -6,5 +6,5 @@ import 'Views/saq.dart';
 void main() => runApp(MaterialApp(
       title: 'iClothes',
       theme: ThemeData(),
-      home: ViewFaq(),
+      home: ViewCadastroUsuario(),
     ));

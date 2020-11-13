@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iclothes/routes/app_routes.dart';
-import 'package:iclothes/components/TileEstabelecimento.dart';
+import 'package:iclothes/components/tileEstabelecimento.dart';
 import 'package:iclothes/provider/providerEstabelecimentos.dart';
 import 'package:provider/provider.dart';
 

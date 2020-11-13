@@ -7,20 +7,15 @@ class ViewFaq extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: _title,
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text(_title),
-          centerTitle: true,
-          automaticallyImplyLeading: true,
-          leading: IconButton(
-            icon: Icon(Icons.arrow_back_outlined),
-            onPressed: () => Navigator.pop(context),
-          ),
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          _title,
+          style: TextStyle(fontSize: 22),
         ),
-        body: ViewFaqBody(),
+        centerTitle: true,
       ),
+      body: ViewFaqBody(),
     );
   }
 }
@@ -77,24 +72,3 @@ class _MyStatefulWidgetState extends State<ViewFaqBody> {
     );
   }
 }
-
-// class ViewFaq extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//         home: Scaffold(
-//       appBar: AppBar(
-//         centerTitle: true,
-//         title: Text(
-//           'Perguntas Frequentes',
-//           style: TextStyle(fontFamily: 'Satisfy', fontSize: 35),
-//         ),
-//       ),
-//       body: Padding(
-//           padding: const EdgeInsets.all(16),
-//           child: Column(
-//             children: <Widget>[],
-//           )),
-//     ));
-//   }
-// }

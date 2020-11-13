@@ -66,7 +66,7 @@ class _EstabelecimentoFormsState extends State<EstabelecimentoForms> {
         ],
       ),
       body: Padding(
-        padding: EdgeInsets.all(15),
+        padding: EdgeInsets.all(16),
         child: Form(
           key: _form,
           child: Column(
@@ -74,8 +74,11 @@ class _EstabelecimentoFormsState extends State<EstabelecimentoForms> {
               TextFormField(
                 initialValue: _formData['nome'],
                 keyboardType: TextInputType.name,
-                decoration:
-                    InputDecoration(labelText: 'Nome do Estabelecimento'),
+                decoration: InputDecoration(
+                    labelText: 'Nome do Estabelecimento',
+                    border: new OutlineInputBorder(
+                        borderRadius:
+                            const BorderRadius.all(const Radius.circular(20)))),
                 validator: (value) {
                   if (value.trim().isEmpty) {
                     return 'Insira o nome do Estabelecimento';
@@ -89,8 +92,11 @@ class _EstabelecimentoFormsState extends State<EstabelecimentoForms> {
               TextFormField(
                 initialValue: _formData['tel'],
                 keyboardType: TextInputType.phone,
-                decoration:
-                    InputDecoration(labelText: 'Telefone do Estabelecimento'),
+                decoration: InputDecoration(
+                    labelText: 'Telefone do Estabelecimento',
+                    border: new OutlineInputBorder(
+                        borderRadius:
+                            const BorderRadius.all(const Radius.circular(20)))),
                 validator: (value) {
                   if (value.trim().isEmpty) {
                     return 'Insira o telefone do Estabelecimento';
@@ -104,8 +110,11 @@ class _EstabelecimentoFormsState extends State<EstabelecimentoForms> {
               TextFormField(
                 initialValue: _formData['end'],
                 keyboardType: TextInputType.streetAddress,
-                decoration:
-                    InputDecoration(labelText: 'Endereço do Estabelecimento'),
+                decoration: InputDecoration(
+                    labelText: 'Endereço do Estabelecimento',
+                    border: new OutlineInputBorder(
+                        borderRadius:
+                            const BorderRadius.all(const Radius.circular(20)))),
                 validator: (value) {
                   if (value.trim().isEmpty) {
                     return 'Insira o endereço do Estabelecimento';
@@ -119,7 +128,11 @@ class _EstabelecimentoFormsState extends State<EstabelecimentoForms> {
               TextFormField(
                 initialValue: _formData['email'],
                 keyboardType: TextInputType.emailAddress,
-                decoration: InputDecoration(labelText: 'Email para login'),
+                decoration: InputDecoration(
+                    labelText: 'Email para login',
+                    border: new OutlineInputBorder(
+                        borderRadius:
+                            const BorderRadius.all(const Radius.circular(20)))),
                 validator: (value) {
                   if (value.trim().isEmpty) {
                     return 'Insira um email para login';
@@ -134,7 +147,11 @@ class _EstabelecimentoFormsState extends State<EstabelecimentoForms> {
               ),
               TextFormField(
                 initialValue: _formData['senha'],
-                decoration: InputDecoration(labelText: 'Senha para login'),
+                decoration: InputDecoration(
+                    labelText: 'Senha para login',
+                    border: new OutlineInputBorder(
+                        borderRadius:
+                            const BorderRadius.all(const Radius.circular(20)))),
                 obscureText: true,
                 enableSuggestions: false,
                 autocorrect: false,

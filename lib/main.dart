@@ -4,6 +4,7 @@ import 'package:iclothes/views/ListEstabelecimentos.dart';
 import 'package:iclothes/provider/providerEstabelecimentos.dart';
 import 'package:iclothes/views/Home.dart';
 import 'package:iclothes/views/CadastroEstabelecimentos.dart';
+import 'package:iclothes/views/Login.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -27,6 +28,7 @@ class MyApp extends StatelessWidget {
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
         routes: {
+          AppRoutes.LOGIN: (_) => Login(),
           AppRoutes.HOME: (_) => Home(),
           AppRoutes.LIST_ESTABELECIMENTOS: (_) => ListEstabelecimentos(),
           AppRoutes.ESTABELECIMENTOS_FORMS: (_) => EstabelecimentoForms()

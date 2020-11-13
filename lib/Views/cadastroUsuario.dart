@@ -20,6 +20,7 @@ class ViewCadastroUsuario extends StatelessWidget {
           centerTitle: true,
           title: Text(
             'Cadastro de Usuário',
+            style: TextStyle(fontFamily: 'Satisfy', fontSize: 35),
           ),
         ),
         body: Padding(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:iClothes/Routes/app_routes.dart';
 import 'package:iClothes/Views/cadastroUsuario.dart';
+import 'package:iClothes/Views/homeEstabelecimento.dart';
 import 'Views/faq.dart';
 import 'Views/infoPessoais.dart';
 import 'Views/sac.dart';
@@ -26,6 +27,7 @@ class _MyAppState extends State<MyApp> {
           AppRoutes.FAQ: (_) => ViewFaq(),
           AppRoutes.SAC: (_) => ViewSac(),
           AppRoutes.CADASTRO_USUARIO: (_) => ViewCadastroUsuario(),
+          AppRoutes.HOME_ESTABELECIMENTO: (_) => ViewHomeEstabelecimento(),
         });
   }
 }

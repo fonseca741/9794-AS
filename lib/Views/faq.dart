@@ -58,11 +58,17 @@ class _MyStatefulWidgetState extends State<ViewFaqBody> {
         return ExpansionPanel(
           headerBuilder: (BuildContext context, bool isExpanded) {
             return ListTile(
-              title: Text(resposta.pergunta),
+              title: Text(
+                resposta.pergunta,
+                style: TextStyle(fontSize: 18),
+              ),
             );
           },
           body: ListTile(
-              title: Text(resposta.resposta),
+              title: Text(
+                resposta.resposta,
+                style: TextStyle(fontSize: 16),
+              ),
               onTap: () {
                 setState(() {});
               }),

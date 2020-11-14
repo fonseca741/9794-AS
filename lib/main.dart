@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:iClothes/Routes/app_routes.dart';
 import 'package:iClothes/Views/cadastroUsuario.dart';
 import 'Views/faq.dart';
-import 'Views/perfil.dart';
+import 'Views/infoPessoais.dart';
 import 'Views/sac.dart';
 
 void main() => runApp(MyApp());
@@ -22,7 +22,7 @@ class _MyAppState extends State<MyApp> {
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
         routes: {
-          AppRoutes.PERFIL: (_) => ViewPerfil(),
+          AppRoutes.INFO_PESSOAIS: (_) => ViewInfoPessoais(),
           AppRoutes.FAQ: (_) => ViewFaq(),
           AppRoutes.SAC: (_) => ViewSac(),
           AppRoutes.CADASTRO_USUARIO: (_) => ViewCadastroUsuario(),

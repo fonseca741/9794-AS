@@ -6,7 +6,7 @@ class ViewSac extends StatelessWidget {
   final TextEditingController _controladorAssunto = TextEditingController();
   final TextEditingController _controladorMensagem = TextEditingController();
 
-  void enviar_alerta(context) {
+  void enviarAlerta(context) {
     Alert(
       context: context,
       type: AlertType.info,
@@ -21,7 +21,7 @@ class ViewSac extends StatelessWidget {
           ),
           onPressed: () => {
             Navigator.pop(context),
-            Navigator.of(context).pushReplacementNamed(AppRoutes.PERFIL)
+            Navigator.of(context).pushReplacementNamed(AppRoutes.INFO_PESSOAIS)
           },
           width: 120,
         )
@@ -89,7 +89,7 @@ class ViewSac extends StatelessWidget {
                 padding: EdgeInsets.fromLTRB(20, 15, 20, 15),
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20)),
-                onPressed: () => {enviar_alerta(context)},
+                onPressed: () => {enviarAlerta(context)},
               ),
             ),
           ],

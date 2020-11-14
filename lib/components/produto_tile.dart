@@ -1,0 +1,65 @@
+import 'package:flutter/material.dart';
+import 'package:manter_produto/models/Produto.dart';
+import 'package:manter_produto/provider/produtos.dart';
+import 'package:manter_produto/routes/app_routes.dart';
+import 'package:provider/provider.dart';
+
+class ProdutoTile extends StatelessWidget {
+  final Produto produto;
+  const ProdutoTile(this.produto);
+  @override
+  Widget build(BuildContext context) {
+    final avatar = produto.foto == null || produto.foto.isEmpty //para quando nao tem icones
+      ? CircleAvatar(child: Icon(Icons.person)) //se for verdadeiro
+      : CircleAvatar(backgroundImage: NetworkImage(produto.foto));  //caso contrário(se for falso)
+    return ListTile(
+      leading: avatar,
+      title: Text(produto.nome),
+      subtitle: Text(produto.categoria),
+      trailing: Container(
+        width: 100,
+        child: Row(
+          children: <Widget> [
+            IconButton(
+              icon: Icon(Icons.edit), color: Colors.blue, onPressed: () {
+                Navigator.of(context).pushNamed(
+                  AppRoutes.PRODUTO_FORM,
+                  arguments: produto,
+                );
+              }
+            ),
+            IconButton(
+              icon: Icon(Icons.delete), color: Colors.red, onPressed: () {
+                showDialog(
+                  context: context,
+                  builder: (ctx) => AlertDialog(
+                    title: Text('Excluir Produto'),
+                    content: Text('Tem certeza?'),
+                    actions: <Widget>[
+                      FlatButton(
+                        child: Text('Não'),
+                        onPressed: () {
+                          Navigator.of(context).pop(false);
+                        }, 
+                      ),
+                      FlatButton(
+                        child: Text('Sim'),
+                        onPressed: () {
+                          Navigator.of(context).pop(true);
+                        }, 
+                      ),
+                    ],
+                  )
+                ).then((confirmed) {
+                  if(confirmed){ 
+                    Provider.of<Produtos>(context).remove(produto);
+                  }
+                });
+              }
+            )
+          ]
+        ),
+      ),
+    );
+  }
+}

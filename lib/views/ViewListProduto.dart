@@ -11,7 +11,8 @@ class ViewListProduto extends StatelessWidget{
     final Produtos produtos = Provider.of(context);
     return Scaffold(
       appBar: AppBar(
-        title: Text('Lista de Produtos'),
+        title: Text('Lista de Produtos', style: TextStyle(fontSize: 22)),
+        centerTitle: true,
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.add), 

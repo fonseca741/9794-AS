@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:manter_produto/models/Produto.dart';
-import 'package:manter_produto/provider/produtos.dart';
-import 'package:provider/provider.dart';
+//import 'package:manter_produto/provider/produtos.dart';
+//import 'package:provider/provider.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 
 class ViewCadastrarProduto extends StatefulWidget{
@@ -29,7 +29,7 @@ class _ViewCadastrarProdutoState extends State<ViewCadastrarProduto> {
     } 
   }
 
-  void cadastrar(){
+  /*void cadastrar(){
     Alert(
       context: context,
       type: AlertType.success,
@@ -45,8 +45,8 @@ class _ViewCadastrarProdutoState extends State<ViewCadastrarProduto> {
         )
       ],
     ).show();
-    Navigator.of(context).pop(); //Volta pro Login
-  }
+    Navigator.of(context).pop();
+  }*/
 
   @override
   Widget build(BuildContext context) {
@@ -56,7 +56,7 @@ class _ViewCadastrarProdutoState extends State<ViewCadastrarProduto> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Cadastro de produto', 
+          'Produto', 
         style: TextStyle(fontSize: 22),
         ),
         centerTitle: true,
@@ -64,7 +64,7 @@ class _ViewCadastrarProdutoState extends State<ViewCadastrarProduto> {
         IconButton(
           icon: Icon(Icons.save), 
           onPressed: () {
-            final isValid =  _form.currentState.validate();
+            /*final isValid =  _form.currentState.validate();
             if(isValid){
               _form.currentState.save();
               Provider.of<Produtos>(context, listen: false).put(Produto(
@@ -78,7 +78,7 @@ class _ViewCadastrarProdutoState extends State<ViewCadastrarProduto> {
                 ),
               );
               Navigator.of(context).pop();
-            }
+            }*/
           }
         ),
         ],
@@ -90,7 +90,7 @@ class _ViewCadastrarProdutoState extends State<ViewCadastrarProduto> {
             child: Column(
               children: <Widget>[
                 Padding(
-                  padding: const EdgeInsets.all(16.0),
+                  padding: const EdgeInsets.only(top: 1),
                   child: TextFormField(
                     initialValue: _formData['Nome'],
                     decoration: InputDecoration(
@@ -229,7 +229,7 @@ class _ViewCadastrarProdutoState extends State<ViewCadastrarProduto> {
                   padding: const EdgeInsets.only(top: 16.0),
                   child: RaisedButton(
                     child: Text(
-                      'Cadastrar',
+                      'Salvar',
                       style: TextStyle(fontSize: 20),
                     ),
                     textColor: Colors.white,
@@ -237,7 +237,23 @@ class _ViewCadastrarProdutoState extends State<ViewCadastrarProduto> {
                     padding: EdgeInsets.fromLTRB(20, 15, 20, 15),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20)),
-                    onPressed: () {},
+                    onPressed: () => {
+                      Alert(
+                        context: context,
+                        type: AlertType.success,
+                        title: "Produto salvo com sucesso!",
+                        buttons: [
+                          DialogButton(
+                            child: Text(
+                              "OK",
+                              style: TextStyle(color: Colors.white, fontSize: 20),
+                            ),
+                            onPressed: () => Navigator.pop(context),
+                            width: 120,
+                          )
+                        ],
+                      ).show(),
+                    },
                   ),
                 ),
               ]

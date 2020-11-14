@@ -18,9 +18,4 @@ class Produto{
     @required this.tamanhos,
     @required this.foto,
   });
-
-  //@override
-  //String toString(){
-    //return 'Produto{Nome: $nome\nCategoria: $categoria\nPreço: $preco\nDescrição: $descricao\nTamanhos: $tamanhos\nFotos: $foto}';
-  //}
 }

@@ -9,9 +9,6 @@ class ProdutoTile extends StatelessWidget {
   const ProdutoTile(this.produto);
   @override
   Widget build(BuildContext context) {
-    /*final avatar = produto.foto == null || produto.foto.isEmpty //para quando nao tem icones
-      ? CircleAvatar(child: Icon(Icons.person)) //se for verdadeiro
-      : CircleAvatar(backgroundImage: NetworkImage(produto.foto));  //caso contrário(se for falso)*/
     return ListTile(
       leading: Icon(Icons.image, size: 30),
       title: Text(produto.nome, style: TextStyle(fontSize: 18)),

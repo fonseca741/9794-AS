@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:manter_produto/models/Produto.dart';
-//import 'package:manter_produto/provider/produtos.dart';
-//import 'package:provider/provider.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 
 class ViewCadastrarProduto extends StatefulWidget{
@@ -29,25 +27,6 @@ class _ViewCadastrarProdutoState extends State<ViewCadastrarProduto> {
     } 
   }
 
-  /*void cadastrar(){
-    Alert(
-      context: context,
-      type: AlertType.success,
-      title: "Produto criado com sucesso!",
-      buttons: [
-        DialogButton(
-          child: Text(
-            "OK",
-            style: TextStyle(color: Colors.white, fontSize: 20),
-          ),
-          onPressed: () => Navigator.pop(context),
-          width: 120,
-        )
-      ],
-    ).show();
-    Navigator.of(context).pop();
-  }*/
-
   @override
   Widget build(BuildContext context) {
     final Produto produto = ModalRoute.of(context).settings.arguments;
@@ -60,28 +39,6 @@ class _ViewCadastrarProdutoState extends State<ViewCadastrarProduto> {
         style: TextStyle(fontSize: 22),
         ),
         centerTitle: true,
-        actions: <Widget>[
-        IconButton(
-          icon: Icon(Icons.save), 
-          onPressed: () {
-            /*final isValid =  _form.currentState.validate();
-            if(isValid){
-              _form.currentState.save();
-              Provider.of<Produtos>(context, listen: false).put(Produto(
-                id: _formData['id'],
-                nome: _formData['Nome'],
-                categoria: _formData['Categoria'],
-                preco: _formData['Preco'],
-                descricao: _formData['Descrição'],
-                tamanhos: _formData['Tamanhos'],
-                foto: _formData['Foto'],
-                ),
-              );
-              Navigator.of(context).pop();
-            }*/
-          }
-        ),
-        ],
       ),
       body: SingleChildScrollView(
           padding: const EdgeInsets.all(16.0),

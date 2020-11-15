@@ -43,7 +43,12 @@ class _PedidoListaState extends State<PedidoLista> {
             child: Text('Estabelecimento: Mega HQ', style: TextStyle(fontSize: 16)),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 40), 
+            padding: const EdgeInsets.only(top: 40),
+            child: Icon(Icons.shopping_cart),
+          
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 15),
             child: Text('Produto: Camisa do Homem Aranha', style: TextStyle(fontSize: 16)),
           ),
           Padding(
@@ -68,7 +73,7 @@ class _PedidoListaState extends State<PedidoLista> {
             )
           ),
            Padding(
-            padding: const EdgeInsets.only(top: 40), 
+            padding: const EdgeInsets.only(top: 20), 
               child: Row(
                 children: <Widget>[
                   Checkbox(

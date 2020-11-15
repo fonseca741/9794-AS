@@ -6,12 +6,37 @@ class NotificacaoTile extends StatelessWidget {
   const NotificacaoTile(this.notificacao);
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      title: Text(notificacao.nome, style: TextStyle(fontSize: 18)),
-      subtitle: Text(notificacao.tipo, style: TextStyle(fontSize: 14)),
-      trailing: Container(
-        width: 100,
-      ),
-    );
+    if(notificacao.nome == 'Pedido confirmado'){
+      return ListTile(
+        leading: Icon(Icons.check_circle, size: 30, color: Colors.green),
+        title: Text(notificacao.nome, style: TextStyle(fontSize: 18)),
+        subtitle: Text(notificacao.tipo, style: TextStyle(fontSize: 14)),
+        trailing: Container(
+          width: 100,
+        ),
+      );
+    }
+    else{
+      if(notificacao.nome == 'Pedido recusado'){
+        return ListTile(
+          leading: Icon(Icons.error, size: 30, color: Colors.red),
+          title: Text(notificacao.nome, style: TextStyle(fontSize: 18)),
+          subtitle: Text(notificacao.tipo, style: TextStyle(fontSize: 14)),
+          trailing: Container(
+            width: 100,
+          ),
+        );
+      }
+      else{
+        return ListTile(
+          leading: Icon(Icons.motorcycle, size: 30, color: Colors.black),
+          title: Text(notificacao.nome, style: TextStyle(fontSize: 18)),
+          subtitle: Text(notificacao.tipo, style: TextStyle(fontSize: 14)),
+          trailing: Container(
+            width: 100,
+          ),
+        );
+      }
+    }
   }
 }

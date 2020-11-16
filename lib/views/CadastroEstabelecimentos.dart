@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:iclothes/models/estabelecimento.dart';
 // import 'package:iclothes/provider/providerEstabelecimentos.dart';
@@ -40,22 +42,22 @@ class _ViewCadastroEstabelecimentoState
     //       senha: _formData['senha'],
     //     ),
     //   );
-    Alert(
-      context: context,
-      type: AlertType.success,
-      title: "Bem Vindo!",
-      desc: "Conta criada com sucesso.",
-      buttons: [
-        DialogButton(
-          child: Text(
-            "OK",
-            style: TextStyle(color: Colors.white, fontSize: 20),
-          ),
-          onPressed: () => Navigator.pop(context),
-          width: 120,
-        )
-      ],
-    ).show();
+    // Alert(
+    //   context: context,
+    //   type: AlertType.success,
+    //   title: "Bem Vindo!",
+    //   desc: "Conta criada com sucesso.",
+    //   buttons: [
+    //     DialogButton(
+    //       child: Text(
+    //         "OK",
+    //         style: TextStyle(color: Colors.white, fontSize: 20),
+    //       ),
+    //       onPressed: () => Navigator.pop(context),
+    //       width: 120,
+    //     )
+    //   ],
+    // ).show();
     Navigator.of(context).pop(); //Volta pro Login
   }
 
@@ -203,7 +205,28 @@ class _ViewCadastroEstabelecimentoState
                     padding: EdgeInsets.fromLTRB(20, 15, 20, 15),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20)),
-                    onPressed: () {},
+                    onPressed: () => {
+                      Alert(
+                        context: context,
+                        type: AlertType.success,
+                        title: "Bem Vindo!",
+                        desc: "Conta criada com sucesso.",
+                        buttons: [
+                          DialogButton(
+                            child: Text(
+                              "OK",
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 20),
+                            ),
+                            onPressed: () => {
+                              Navigator.pop(context),
+                              Navigator.pop(context)
+                            },
+                            width: 120,
+                          )
+                        ],
+                      ).show()
+                    },
                   ),
                 ),
               ],

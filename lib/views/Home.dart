@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:iclothes/views/listEstabelecimentos.dart';
-import 'package:iclothes/views/faq.dart';
-import 'package:iclothes/views/perfil.dart';
-import 'package:iclothes/views/sac.dart';
+import 'package:iclothes/views/cadastroEstabelecimentos.dart';
+import 'package:iclothes/views/listaEstabelecimentos.dart';
 
 class ViewHome extends StatefulWidget {
   @override
@@ -15,9 +13,7 @@ class _ViewHomeState extends State<ViewHome> {
 
   final List<Widget> _children = [
     ViewListEstabelecimento(),
-    ViewSac(),
-    ViewFaq(),
-    ViewPerfil()
+    ViewCadastroEstabelecimento()
   ];
 
   @override

@@ -85,7 +85,7 @@ class _ViewLoginState extends State<ViewLogin> {
                           borderRadius: BorderRadius.circular(20)),
                       onPressed: () => {
                         Navigator.of(context)
-                            .pushNamed(AppRoutes.CADASTRO_USUARIO)
+                            .pushNamed(AppRoutes.CADASTRO_ESTABELECIMENTO)
                       },
                     ),
                     RaisedButton(

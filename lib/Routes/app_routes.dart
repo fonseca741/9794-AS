@@ -1,7 +1,7 @@
 class AppRoutes {
-  static const CADASTRO_USUARIO = '/cadastroUsuario';
+  static const CADASTRO_USUARIO = '/';
   static const FAQ = '/faq';
   static const SAC = '/sac';
   static const INFO_PESSOAIS = '/infoPessoais';
-  static const HOME_ESTABELECIMENTO = '/';
+  static const HOME_ESTABELECIMENTO = '/homeEstabelecimentos';
 }

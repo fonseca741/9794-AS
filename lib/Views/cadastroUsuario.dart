@@ -160,6 +160,15 @@ class ViewCadastroUsuario extends StatelessWidget {
                         borderRadius: BorderRadius.circular(20)),
                     onPressed: () {
                       if (_form.currentState.validate()) {
+                        Usuario(
+                          //instanciação do novo usuário para futuras operações
+                          _formData['nome'],
+                          _formData['email'],
+                          _formData['tel'],
+                          _formData['cpf'],
+                          _formData['end'],
+                          _formData['senha'],
+                        );
                         Alert(
                           context: context,
                           type: AlertType.success,

@@ -23,6 +23,7 @@ class ViewInfoPessoais extends StatelessWidget {
                 Icons.arrow_forward_ios,
                 size: 20,
               ),
+              onTap: () => {Navigator.of(context).pushNamed(AppRoutes.PERFIL)},
             ),
             ListTile(
               leading: Icon(

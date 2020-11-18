@@ -33,12 +33,17 @@ class ProviderEstabelecimentos with ChangeNotifier {
       _items.putIfAbsent(
         id,
         () => Estabelecimento(
-            id: id,
-            nome: estab.nome,
-            telefone: estab.telefone,
-            endereco: estab.endereco,
-            email: estab.email,
-            senha: estab.senha),
+          id: id,
+          nome: estab.nome,
+          descricao: estab.descricao,
+          urlFoto: estab.urlFoto,
+          telefone: estab.telefone,
+          endereco: estab.endereco,
+          email: estab.email,
+          senha: estab.senha,
+          cnpj: estab.cnpj,
+          categorias: estab.categorias,
+        ),
       );
     }
     notifyListeners();

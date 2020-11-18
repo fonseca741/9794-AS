@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:iclothes/views/cadastroEstabelecimentos.dart';
 import 'package:iclothes/views/listaEstabelecimentos.dart';
+import 'package:iclothes/views/listaPedidos.dart';
 
 class ViewHome extends StatefulWidget {
   @override
@@ -12,8 +13,8 @@ class _ViewHomeState extends State<ViewHome> {
   int _currentIndex = 0;
 
   final List<Widget> _children = [
-    ViewListEstabelecimento(),
-    ViewCadastroEstabelecimento()
+    ViewListaEstabelecimento(),
+    ViewListaPedidos()
   ];
 
   @override
@@ -35,7 +36,7 @@ class _ViewHomeState extends State<ViewHome> {
             label: 'Procurar',
           ),
           BottomNavigationBarItem(
-            icon: FaIcon(FontAwesomeIcons.ticketAlt),
+            icon: FaIcon(FontAwesomeIcons.clipboardList),
             label: 'Pedidos',
           ),
           BottomNavigationBarItem(

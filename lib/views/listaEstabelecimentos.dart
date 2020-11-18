@@ -4,13 +4,13 @@ import 'package:iclothes/components/tileEstabelecimento.dart';
 import 'package:iclothes/provider/providerEstabelecimentos.dart';
 import 'package:provider/provider.dart';
 
-class ViewListEstabelecimento extends StatefulWidget {
+class ViewListaEstabelecimento extends StatefulWidget {
   @override
-  _ViewListEstabelecimentoState createState() =>
-      _ViewListEstabelecimentoState();
+  _ViewListaEstabelecimentoState createState() =>
+      _ViewListaEstabelecimentoState();
 }
 
-class _ViewListEstabelecimentoState extends State<ViewListEstabelecimento> {
+class _ViewListaEstabelecimentoState extends State<ViewListaEstabelecimento> {
   @override
   Widget build(BuildContext context) {
     final ProviderEstabelecimentos estabelecimentos = Provider.of(context);
@@ -37,7 +37,11 @@ class _ViewListEstabelecimentoState extends State<ViewListEstabelecimento> {
           )
         ],
       ),
-      body: ListView.builder(
+      body: ListView.separated(
+          padding: EdgeInsets.only(left: 16, right: 16),
+          separatorBuilder: (context, index) => Divider(
+                color: Color(0xff1d3557),
+              ),
           itemCount: estabelecimentos.count,
           itemBuilder: (ctx, i) =>
               TileEstabelecimento(estabelecimentos.byIndex(i))),

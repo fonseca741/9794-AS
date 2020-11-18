@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:iclothes/provider/providerPedidos.dart';
 import 'package:iclothes/routes/app_routes.dart';
 import 'package:iclothes/views/cadastroEstabelecimentos.dart';
 import 'package:iclothes/views/listaEstabelecimentos.dart';
@@ -24,6 +25,9 @@ class _MyAppState extends State<MyApp> {
       providers: [
         ChangeNotifierProvider(
           create: (context) => ProviderEstabelecimentos(),
+        ),
+        ChangeNotifierProvider(
+          create: (context) => ProviderPedidos(),
         )
       ],
       child: MaterialApp(
@@ -35,7 +39,7 @@ class _MyAppState extends State<MyApp> {
         routes: {
           AppRoutes.LOGIN: (_) => ViewLogin(),
           AppRoutes.HOME: (_) => ViewHome(),
-          AppRoutes.LIST_ESTABELECIMENTOS: (_) => ViewListEstabelecimento(),
+          AppRoutes.LIST_ESTABELECIMENTOS: (_) => ViewListaEstabelecimento(),
           AppRoutes.CADASTRO_ESTABELECIMENTO: (_) =>
               ViewCadastroEstabelecimento()
         },

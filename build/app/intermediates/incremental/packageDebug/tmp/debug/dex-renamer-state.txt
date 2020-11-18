@@ -1,4 +1,4 @@
-#Mon Nov 16 10:40:19 BRT 2020
+#Wed Nov 18 14:48:24 BRT 2020
 base.0=D\:\\faculdade\\AS\\9794-AS\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

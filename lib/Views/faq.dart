@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iClothes/Models/pergunta.dart';
+import 'package:iClothes/Routes/app_routes.dart';
 // import 'package:expandable/expandable.dart';
 
 class ViewFaq extends StatelessWidget {
@@ -42,7 +43,33 @@ class _MyStatefulWidgetState extends State<ViewFaqBody> {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Container(
-        child: _buildPanel(),
+        // child: _buildPanel(),
+        child: Column(
+          children: [
+            _buildPanel(),
+            Padding(padding: EdgeInsets.all(10)),
+            Padding(
+              padding: EdgeInsets.only(left: 20, right: 20),
+              child: Text(
+                'Não encontrou a resposta para a sua pergunta? Nos envie uma mensagem!',
+                style: TextStyle(fontSize: 20),
+              ),
+            ),
+            Padding(padding: EdgeInsets.all(10)),
+            RaisedButton(
+              child: Text(
+                'Enviar mensagem',
+                style: TextStyle(fontSize: 18),
+              ),
+              textColor: Colors.white,
+              color: Color(0xff1d3557),
+              padding: EdgeInsets.fromLTRB(20, 12, 20, 12),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(17)),
+              onPressed: () => {Navigator.of(context).pushNamed(AppRoutes.SAC)},
+            ),
+          ],
+        ),
       ),
     );
   }

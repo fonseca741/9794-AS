@@ -8,6 +8,6 @@ class Notificacao{
   const Notificacao({
     this.id,
     @required this.nome,
-    @required this.tipo,
+    this.tipo,
   });
 }

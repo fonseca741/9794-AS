@@ -3,6 +3,10 @@ import 'package:manter_produto/provider/notificacoes.dart';
 import 'package:manter_produto/routes/app_routes.dart';
 import 'package:manter_produto/provider/produtos.dart';   
 import 'package:manter_produto/views/ViewCadastrarProduto.dart';
+import 'package:manter_produto/views/ViewDetalheNotificacao.dart';
+import 'package:manter_produto/views/ViewDetalheNotificacao2.dart';
+import 'package:manter_produto/views/ViewDetalheNotificacao3.dart';
+import 'package:manter_produto/views/ViewDevolucao.dart';
 import 'package:manter_produto/views/ViewListProduto.dart';
 import 'package:manter_produto/views/ViewNotificacoes.dart';
 import 'package:provider/provider.dart';
@@ -33,9 +37,13 @@ class _MyAppState extends State<MyApp> {
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
         routes: {
-          //AppRoutes.HOME: (_) => ViewListProduto(),
           AppRoutes.HOME: (_) => ViewNotificacoes(),
-          AppRoutes.PRODUTO_FORM: (_) => ViewCadastrarProduto()
+          //AppRoutes.HOME: (_) => ViewListProduto(),
+          //AppRoutes.HOME: (_) => ViewDevolucao(),
+          AppRoutes.PRODUTO_FORM: (_) => ViewCadastrarProduto(),
+          AppRoutes.DETALHES_NOTI: (_) => ViewDetalheNotificacao(),
+          AppRoutes.DETALHES_NOTI2: (_) => ViewDetalheNotificacao2(),
+          AppRoutes.DETALHES_NOTI3: (_) => ViewDetalheNotificacao3(),
         },
       ),
     );

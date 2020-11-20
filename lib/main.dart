@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:iClothes/Routes/app_routes.dart';
 import 'package:iClothes/Views/alterarSenha.dart';
 import 'package:iClothes/Views/cadastroUsuario.dart';
+import 'package:iClothes/Views/gerarRealtorio.dart';
 import 'package:iClothes/Views/homeEstabelecimento.dart';
 import 'package:iClothes/Views/perfil.dart';
 import 'Views/faq.dart';
@@ -32,6 +33,7 @@ class _MyAppState extends State<MyApp> {
           AppRoutes.HOME_ESTABELECIMENTO: (_) => ViewHomeEstabelecimento(),
           AppRoutes.PERFIL: (_) => ViewPerfil(),
           AppRoutes.ALTERAR_SENHA: (_) => ViewAlterarSenha(),
+          AppRoutes.GERAR_RELATORIO: (_) => ViewGerarRelatorio()
         });
   }
 }

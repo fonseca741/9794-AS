@@ -59,7 +59,9 @@ class ViewHomeEstabelecimento extends StatelessWidget {
                   Icons.arrow_forward_ios,
                   size: 20,
                 ),
-                onTap: () => {Navigator.of(context).pushNamed(AppRoutes.FAQ)}),
+                onTap: () => {
+                      Navigator.of(context).pushNamed(AppRoutes.GERAR_RELATORIO)
+                    }),
             ListTile(
               leading: Icon(
                 Icons.logout,

@@ -56,6 +56,7 @@ class ViewSac extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.only(top: 16.0),
                         child: TextFormField(
+                            initialValue: _formdata['assunto'],
                             decoration: InputDecoration(
                                 labelText: 'Assunto',
                                 border: new OutlineInputBorder(

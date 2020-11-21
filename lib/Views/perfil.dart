@@ -235,6 +235,22 @@ class _ViewPerfilState extends State<ViewPerfil> {
                       ),
                     ],
                   ),
+                  Padding(padding: EdgeInsets.all(16)),
+                  RaisedButton(
+                    child: Text(
+                      'Excluir Conta',
+                      style: TextStyle(fontSize: 20),
+                    ),
+                    textColor: Colors.white,
+                    color: Colors.red,
+                    padding: EdgeInsets.fromLTRB(20, 15, 20, 15),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20)),
+                    onPressed: () => {
+                      Navigator.of(context)
+                          .pushReplacementNamed(AppRoutes.EXCLUIR_CONTA),
+                    },
+                  )
                 ],
               ),
             )));

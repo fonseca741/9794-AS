@@ -7,6 +7,7 @@ import 'package:iClothes/Views/gerarRealtorio.dart';
 import 'package:iClothes/Views/homeEstabelecimento.dart';
 import 'package:iClothes/Views/perfil.dart';
 import 'Views/cadastroEndereco.dart';
+import 'Views/excluirConta.dart';
 import 'Views/faq.dart';
 import 'Views/infoPessoais.dart';
 import 'Views/sac.dart';
@@ -38,6 +39,7 @@ class _MyAppState extends State<MyApp> {
           AppRoutes.GERAR_RELATORIO: (_) => ViewGerarRelatorio(),
           AppRoutes.CADASTRO_CARTAO: (_) => ViewCadastroCartao(),
           AppRoutes.CADASTRO_ENDERECO: (_) => ViewCadastroEndereco(),
+          AppRoutes.EXCLUIR_CONTA: (_) => ViewExcluirConta(),
         });
   }
 }

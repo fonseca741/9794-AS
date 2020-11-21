@@ -24,8 +24,12 @@ dependencies:
   flutter:
     sdk: flutter
   provider:
-  font_awesome_flutter: '8.10.0'
+  font_awesome_flutter: ^8.10.0
   rflutter_alert: ^1.1.0
+  mask_text_input_formatter: ^1.1.0
+  flutter_tagging: ^2.2.0+3
+
+
 
 
 

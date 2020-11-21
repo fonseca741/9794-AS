@@ -32,6 +32,7 @@ class _ViewListaPedidosState extends State<ViewListaPedidos> {
           itemBuilder: (ctx, i) {
             return TilePedido(
               pedidos.byIndex(i),
+              i,
             );
           }),
     );

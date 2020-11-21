@@ -26,4 +26,13 @@ class Estabelecimento {
     @required this.categorias,
     @required this.regraEstabelecimento,
   });
+
+  String getInfo() {
+    String retorno = this.nome;
+    this.categorias.forEach((element) {
+      retorno += ' - ' + element;
+    });
+    retorno += ' - ' + this.cnpj;
+    return retorno;
+  }
 }

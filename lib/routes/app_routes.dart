@@ -3,4 +3,6 @@ class AppRoutes {
   static const HOME = '/Home';
   static const LIST_ESTABELECIMENTOS = '/ListEstabelecimentos';
   static const CADASTRO_ESTABELECIMENTO = '/cadastroEstabelecimentos';
+  static const CADASTRO_ESTABELECIMENTO_ADICIONAL =
+      '/cadastroEstabelecimentosAdicional';
 }

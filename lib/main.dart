@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:iclothes/provider/providerPedidos.dart';
 import 'package:iclothes/routes/app_routes.dart';
 import 'package:iclothes/views/cadastroEstabelecimentos.dart';
+import 'package:iclothes/views/cadastroEstabelecimentosAdicional.dart';
 import 'package:iclothes/views/listaEstabelecimentos.dart';
 import 'package:iclothes/provider/providerEstabelecimentos.dart';
 import 'package:iclothes/views/home.dart';
@@ -41,7 +42,9 @@ class _MyAppState extends State<MyApp> {
           AppRoutes.HOME: (_) => ViewHome(),
           AppRoutes.LIST_ESTABELECIMENTOS: (_) => ViewListaEstabelecimento(),
           AppRoutes.CADASTRO_ESTABELECIMENTO: (_) =>
-              ViewCadastroEstabelecimento()
+              ViewCadastroEstabelecimento(),
+          AppRoutes.CADASTRO_ESTABELECIMENTO_ADICIONAL: (_) =>
+              ViewCadastroEstabelecimentoAdicional(),
         },
       ),
     );

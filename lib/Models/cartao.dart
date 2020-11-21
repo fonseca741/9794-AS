@@ -5,11 +5,11 @@ class Cartao {
   String cvv;
   String cpf;
 
-  Cartao({
+  Cartao(
     this.numero,
     this.titular,
     this.validade,
     this.cvv,
     this.cpf,
-  });
+  );
 }

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:iClothes/Models/cartao.dart';
+import 'package:rflutter_alert/rflutter_alert.dart';
 
-class ViewCadastrarCartao extends StatelessWidget {
+class ViewCadastroCartao extends StatelessWidget {
   final _form = GlobalKey<FormState>();
   final Map<String, Object> _formData = {};
 
@@ -52,7 +54,7 @@ class ViewCadastrarCartao extends StatelessWidget {
                                   const Radius.circular(20)))),
                       validator: (value) {
                         if (value.trim().isEmpty) {
-                          return 'Este campo não pode ser vazio';
+                          return 'Campo obrigatório';
                         }
                         return null;
                       },
@@ -73,7 +75,7 @@ class ViewCadastrarCartao extends StatelessWidget {
                                   const Radius.circular(20)))),
                       validator: (value) {
                         if (value.trim().isEmpty) {
-                          return 'Este campo não pode ser vazio';
+                          return 'Campo obrigatório';
                         }
                         return null;
                       },
@@ -120,6 +122,50 @@ class ViewCadastrarCartao extends StatelessWidget {
                 },
                 onSaved: (value) {
                   _formData['cpf'] = value;
+                },
+              ),
+              Padding(padding: EdgeInsets.all(155)),
+              RaisedButton(
+                child: Text(
+                  'Cadastrar Cartão',
+                  style: TextStyle(fontSize: 20),
+                ),
+                textColor: Colors.white,
+                color: Colors.green,
+                padding: EdgeInsets.fromLTRB(20, 15, 20, 15),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20)),
+                onPressed: () => {
+                  if (_form.currentState.validate())
+                    {
+                      Cartao(
+                        //instanciação do novo cartão para futuras operações
+                        _formData['numero'],
+                        _formData['titular'],
+                        _formData['validade'],
+                        _formData['cvv'],
+                        _formData['cpf'],
+                      ),
+                      Alert(
+                        context: context,
+                        type: AlertType.success,
+                        title: "Cartão cadastrado com sucesso!",
+                        buttons: [
+                          DialogButton(
+                            child: Text(
+                              "OK",
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 20),
+                            ),
+                            onPressed: () => {
+                              Navigator.pop(context),
+                              // Navigator.of(context).pushReplacementNamed(AppRoutes.LOGIN)
+                            },
+                            width: 120,
+                          )
+                        ],
+                      ).show(),
+                    }
                 },
               ),
             ],

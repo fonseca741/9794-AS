@@ -7,5 +7,6 @@ class AppRoutes {
   static const PERFIL = '/perfil';
   static const ALTERAR_SENHA = '/alterarSenha';
   static const GERAR_RELATORIO = '/gerarRelatorio';
-  static const CADASTRO_CARTAO = '/';
+  static const CADASTRO_CARTAO = '/cadastroCartao';
+  static const CADASTRO_ENDERECO = '/';
 }

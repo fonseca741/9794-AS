@@ -1,13 +1,13 @@
 class Cartao {
   String numero;
-  String nome;
+  String titular;
   String validade;
   String cvv;
   String cpf;
 
   Cartao({
     this.numero,
-    this.nome,
+    this.titular,
     this.validade,
     this.cvv,
     this.cpf,

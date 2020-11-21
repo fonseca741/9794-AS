@@ -3,8 +3,9 @@ class AppRoutes {
   static const FAQ = '/faq';
   static const SAC = '/sac';
   static const INFO_PESSOAIS = '/infoPessoais';
-  static const HOME_ESTABELECIMENTO = '/';
+  static const HOME_ESTABELECIMENTO = '/homeEstabelecimento';
   static const PERFIL = '/perfil';
   static const ALTERAR_SENHA = '/alterarSenha';
-  static const GERAR_RELATORIO = '/';
+  static const GERAR_RELATORIO = '/gerarRelatorio';
+  static const CADASTRO_CARTAO = '/';
 }

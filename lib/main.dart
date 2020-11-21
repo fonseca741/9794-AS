@@ -33,7 +33,7 @@ class _MyAppState extends State<MyApp> {
           AppRoutes.HOME_ESTABELECIMENTO: (_) => ViewHomeEstabelecimento(),
           AppRoutes.PERFIL: (_) => ViewPerfil(),
           AppRoutes.ALTERAR_SENHA: (_) => ViewAlterarSenha(),
-          AppRoutes.GERAR_RELATORIO: (_) => ViewGerarRelatorio()
+          AppRoutes.GERAR_RELATORIO: (_) => ViewGerarRelatorio(),
         });
   }
 }

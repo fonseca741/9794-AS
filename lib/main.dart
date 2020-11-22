@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:manter_produto/provider/notificacoes.dart';
 import 'package:manter_produto/routes/app_routes.dart';
-import 'package:manter_produto/provider/produtos.dart';   
+import 'package:manter_produto/provider/produtos.dart';
+import 'package:manter_produto/views/ViewBusca.dart';   
 import 'package:manter_produto/views/ViewCadastrarProduto.dart';
 import 'package:manter_produto/views/ViewDetalheNotificacao.dart';
 import 'package:manter_produto/views/ViewDetalheNotificacao2.dart';
@@ -37,9 +38,10 @@ class _MyAppState extends State<MyApp> {
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
         routes: {
-          AppRoutes.HOME: (_) => ViewNotificacoes(),
+          //AppRoutes.HOME: (_) => ViewNotificacoes(),
           //AppRoutes.HOME: (_) => ViewListProduto(),
           //AppRoutes.HOME: (_) => ViewDevolucao(),
+          AppRoutes.HOME: (_) => ViewBusca(),
           AppRoutes.PRODUTO_FORM: (_) => ViewCadastrarProduto(),
           AppRoutes.DETALHES_NOTI: (_) => ViewDetalheNotificacao(),
           AppRoutes.DETALHES_NOTI2: (_) => ViewDetalheNotificacao2(),

@@ -33,7 +33,31 @@ class ViewDevolucao extends StatelessWidget{
           child: Column(
             children: <Widget>[
               Padding(
-                padding: const EdgeInsets.only(top: 1),
+                padding: const EdgeInsets.only(top:100),
+                child: Text(
+                  'Produto:',
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top:16),
+                child: Text(
+                  'Regata lisa sem estampa preta M      RS34,90',
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top:50),
+                child: Text(
+                  'Estabelecimento:',
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top:16),
+                child: Text(
+                  'Boutique do Zé',
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 100),
                 child: TextFormField(
                   initialValue: _formData['Motivo'],
                   decoration: InputDecoration(

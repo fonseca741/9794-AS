@@ -8,7 +8,10 @@ import 'package:manter_produto/views/ViewDetalheNotificacao.dart';
 import 'package:manter_produto/views/ViewDetalheNotificacao2.dart';
 import 'package:manter_produto/views/ViewDetalheNotificacao3.dart';
 import 'package:manter_produto/views/ViewDevolucao.dart';
+import 'package:manter_produto/views/ViewHome.dart';
+import 'package:manter_produto/views/ViewHomeEstabelec.dart';
 import 'package:manter_produto/views/ViewListProduto.dart';
+import 'package:manter_produto/views/ViewLogin.dart';
 import 'package:manter_produto/views/ViewNotificacoes.dart';
 import 'package:provider/provider.dart';
 
@@ -28,7 +31,7 @@ class _MyAppState extends State<MyApp> {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(
-          create: (ctx) => Notificacoes(),
+          create: (ctx) => Produtos(),
         ),
       ],
       child: MaterialApp(
@@ -41,7 +44,10 @@ class _MyAppState extends State<MyApp> {
           //AppRoutes.HOME: (_) => ViewNotificacoes(),
           //AppRoutes.HOME: (_) => ViewListProduto(),
           //AppRoutes.HOME: (_) => ViewDevolucao(),
-          AppRoutes.HOME: (_) => ViewBusca(),
+          //AppRoutes.HOME: (_) => ViewBusca(),
+          AppRoutes.HOME: (_) => ViewLogin(),
+          AppRoutes.BARRA: (_) => ViewHome(),
+          //AppRoutes.BARRA: (_) => ViewHomeEstabelec(),
           AppRoutes.PRODUTO_FORM: (_) => ViewCadastrarProduto(),
           AppRoutes.DETALHES_NOTI: (_) => ViewDetalheNotificacao(),
           AppRoutes.DETALHES_NOTI2: (_) => ViewDetalheNotificacao2(),

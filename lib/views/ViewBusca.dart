@@ -25,7 +25,7 @@ class ViewBusca extends StatelessWidget{
                 ),
               ),
             ),
-            Padding(
+            /*Padding(
               padding: const EdgeInsets.only(top: 50),
               child: Container(
                 height: 50.0,
@@ -35,11 +35,11 @@ class ViewBusca extends StatelessWidget{
                     BoxShadow(
                       offset: Offset(0.0, 10.0),
                       blurRadius: 10.0,
-                      color: Colors.red
+                      color: Colors.black38
                     )
                   ],
                   border: Border.all(color: Colors.red, width: 1.5),
-                  color: Colors.white,
+                  color: Colors.red[300],
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: Row(
@@ -57,8 +57,24 @@ class ViewBusca extends StatelessWidget{
                   ],
                 ),
               ),
-            ),
+            ),*/
             Padding(
+              padding: const EdgeInsets.only(top: 50),
+              child: Column(
+                children: [
+                  RaisedButton(
+                    color: Colors.red[400],
+                    textColor: Colors.black,
+                    elevation: 20, 
+                    child: Text(
+                      'Roupa',
+                    ),
+                    onPressed: (){}
+                  ),
+                ],
+              ),
+            ),
+            /*Padding(
               padding: const EdgeInsets.only(top: 20),
               child: Container(
                 height: 50.0,
@@ -68,11 +84,11 @@ class ViewBusca extends StatelessWidget{
                     BoxShadow(
                       offset: Offset(0.0, 10.0),
                       blurRadius: 10.0,
-                      color: Colors.black
+                      color: Colors.black38
                     )
                   ],
                   border: Border.all(color: Colors.black, width: 1.5),
-                  color: Colors.white,
+                  color: Colors.black45,
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: Row(
@@ -90,8 +106,24 @@ class ViewBusca extends StatelessWidget{
                   ],
                 ),
               ),
-            ),
+            ),*/
             Padding(
+              padding: const EdgeInsets.only(top: 20),
+              child: Column(
+                children: [
+                  RaisedButton(
+                    color: Colors.black45,
+                    textColor: Colors.black,
+                    elevation: 20, 
+                    child: Text(
+                      'Social',
+                    ),
+                    onPressed: (){}
+                  ),
+                ],
+              ),
+            ),
+            /*Padding(
               padding: const EdgeInsets.only(top: 20),
               child: Container(
                 height: 50.0,
@@ -101,11 +133,11 @@ class ViewBusca extends StatelessWidget{
                     BoxShadow(
                       offset: Offset(0.0, 10.0),
                       blurRadius: 10.0,
-                      color: Colors.blue
+                      color: Colors.black38
                     )
                   ],
                   border: Border.all(color: Colors.blue, width: 1.5),
-                  color: Colors.white,
+                  color: Colors.blue[300],
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: Row(
@@ -123,8 +155,24 @@ class ViewBusca extends StatelessWidget{
                   ],
                 ),
               ),
-            ),
+            ),*/
             Padding(
+              padding: const EdgeInsets.only(top: 20),
+              child: Column(
+                children: [
+                  RaisedButton(
+                    color: Colors.blue[400],
+                    textColor: Colors.black,
+                    elevation: 20, 
+                    child: Text(
+                      'Sapato',
+                    ),
+                    onPressed: (){}
+                  ),
+                ],
+              ),
+            ),
+            /*Padding(
               padding: const EdgeInsets.only(top: 20),
               child: Container(
                 height: 50.0,
@@ -134,11 +182,11 @@ class ViewBusca extends StatelessWidget{
                     BoxShadow(
                       offset: Offset(0.0, 10.0),
                       blurRadius: 10.0,
-                      color: Colors.purple
+                      color: Colors.black38
                     )
                   ],
                   border: Border.all(color: Colors.purple, width: 1.5),
-                  color: Colors.white,
+                  color: Colors.purple[300],
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: Row(
@@ -156,8 +204,24 @@ class ViewBusca extends StatelessWidget{
                   ],
                 ),
               ),
-            ),
+            ),*/
             Padding(
+              padding: const EdgeInsets.only(top: 20),
+              child: Column(
+                children: [
+                  RaisedButton(
+                    color: Colors.purple[400],
+                    textColor: Colors.black,
+                    elevation: 20, 
+                    child: Text(
+                      'Cosmético',
+                    ),
+                    onPressed: (){}
+                  ),
+                ],
+              ),
+            ),
+            /*Padding(
               padding: const EdgeInsets.only(top: 20),
               child: Container(
                 height: 50.0,
@@ -167,11 +231,11 @@ class ViewBusca extends StatelessWidget{
                     BoxShadow(
                       offset: Offset(0.0, 10.0),
                       blurRadius: 10.0,
-                      color: Colors.pink
+                      color: Colors.black38
                     )
                   ],
                   border: Border.all(color: Colors.pink, width: 1.5),
-                  color: Colors.white,
+                  color: Colors.pink[300],
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: Row(
@@ -189,8 +253,24 @@ class ViewBusca extends StatelessWidget{
                   ],
                 ),
               ),
-            ),
+            ),*/
             Padding(
+              padding: const EdgeInsets.only(top: 20),
+              child: Column(
+                children: [
+                  RaisedButton(
+                    color: Colors.pink[400],
+                    textColor: Colors.black,
+                    elevation: 20, 
+                    child: Text(
+                      'Bolsa',
+                    ),
+                    onPressed: (){}
+                  ),
+                ],
+              ),
+            ),
+            /*Padding(
               padding: const EdgeInsets.only(top: 20),
               child: Container(
                 height: 50.0,
@@ -200,11 +280,11 @@ class ViewBusca extends StatelessWidget{
                     BoxShadow(
                       offset: Offset(0.0, 10.0),
                       blurRadius: 10.0,
-                      color: Colors.green
+                      color: Colors.black38
                     )
                   ],
                   border: Border.all(color: Colors.green, width: 1.5),
-                  color: Colors.white,
+                  color: Colors.green[300],
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: Row(
@@ -221,6 +301,22 @@ class ViewBusca extends StatelessWidget{
                     ),
                   ],
                 ),
+              ),
+            ),*/
+            Padding(
+              padding: const EdgeInsets.only(top: 20),
+              child: Column(
+                children: [
+                  RaisedButton(
+                    color: Colors.green[400],
+                    textColor: Colors.black,
+                    elevation: 20, 
+                    child: Text(
+                      'Acessório',
+                    ),
+                    onPressed: (){}
+                  ),
+                ],
               ),
             ),
           ],

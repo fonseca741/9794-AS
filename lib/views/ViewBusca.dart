@@ -25,39 +25,6 @@ class ViewBusca extends StatelessWidget{
                 ),
               ),
             ),
-            /*Padding(
-              padding: const EdgeInsets.only(top: 50),
-              child: Container(
-                height: 50.0,
-                width: 150.0,
-                decoration: BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(
-                      offset: Offset(0.0, 10.0),
-                      blurRadius: 10.0,
-                      color: Colors.black38
-                    )
-                  ],
-                  border: Border.all(color: Colors.red, width: 1.5),
-                  color: Colors.red[300],
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                child: Row(
-                  children: <Widget>[
-                    Container(
-                      child: Text('Roupa'),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.only(
-                          bottomLeft: Radius.circular(20),
-                          topLeft: Radius.circular(20),
-                          bottomRight: Radius.circular(200),
-                        )
-                      )
-                    ),
-                  ],
-                ),
-              ),
-            ),*/
             Padding(
               padding: const EdgeInsets.only(top: 50),
               child: Column(
@@ -74,39 +41,6 @@ class ViewBusca extends StatelessWidget{
                 ],
               ),
             ),
-            /*Padding(
-              padding: const EdgeInsets.only(top: 20),
-              child: Container(
-                height: 50.0,
-                width: 150.0,
-                decoration: BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(
-                      offset: Offset(0.0, 10.0),
-                      blurRadius: 10.0,
-                      color: Colors.black38
-                    )
-                  ],
-                  border: Border.all(color: Colors.black, width: 1.5),
-                  color: Colors.black45,
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                child: Row(
-                  children: <Widget>[
-                    Container(
-                      child: Text('Social'),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.only(
-                          bottomLeft: Radius.circular(20),
-                          topLeft: Radius.circular(20),
-                          bottomRight: Radius.circular(200),
-                        )
-                      )
-                    ),
-                  ],
-                ),
-              ),
-            ),*/
             Padding(
               padding: const EdgeInsets.only(top: 20),
               child: Column(
@@ -123,39 +57,6 @@ class ViewBusca extends StatelessWidget{
                 ],
               ),
             ),
-            /*Padding(
-              padding: const EdgeInsets.only(top: 20),
-              child: Container(
-                height: 50.0,
-                width: 150.0,
-                decoration: BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(
-                      offset: Offset(0.0, 10.0),
-                      blurRadius: 10.0,
-                      color: Colors.black38
-                    )
-                  ],
-                  border: Border.all(color: Colors.blue, width: 1.5),
-                  color: Colors.blue[300],
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                child: Row(
-                  children: <Widget>[
-                    Container(
-                      child: Text('Sapato'),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.only(
-                          bottomLeft: Radius.circular(20),
-                          topLeft: Radius.circular(20),
-                          bottomRight: Radius.circular(200),
-                        )
-                      )
-                    ),
-                  ],
-                ),
-              ),
-            ),*/
             Padding(
               padding: const EdgeInsets.only(top: 20),
               child: Column(
@@ -172,39 +73,6 @@ class ViewBusca extends StatelessWidget{
                 ],
               ),
             ),
-            /*Padding(
-              padding: const EdgeInsets.only(top: 20),
-              child: Container(
-                height: 50.0,
-                width: 150.0,
-                decoration: BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(
-                      offset: Offset(0.0, 10.0),
-                      blurRadius: 10.0,
-                      color: Colors.black38
-                    )
-                  ],
-                  border: Border.all(color: Colors.purple, width: 1.5),
-                  color: Colors.purple[300],
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                child: Row(
-                  children: <Widget>[
-                    Container(
-                      child: Text('Cosmético'),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.only(
-                          bottomLeft: Radius.circular(20),
-                          topLeft: Radius.circular(20),
-                          bottomRight: Radius.circular(200),
-                        )
-                      )
-                    ),
-                  ],
-                ),
-              ),
-            ),*/
             Padding(
               padding: const EdgeInsets.only(top: 20),
               child: Column(
@@ -221,39 +89,6 @@ class ViewBusca extends StatelessWidget{
                 ],
               ),
             ),
-            /*Padding(
-              padding: const EdgeInsets.only(top: 20),
-              child: Container(
-                height: 50.0,
-                width: 150.0,
-                decoration: BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(
-                      offset: Offset(0.0, 10.0),
-                      blurRadius: 10.0,
-                      color: Colors.black38
-                    )
-                  ],
-                  border: Border.all(color: Colors.pink, width: 1.5),
-                  color: Colors.pink[300],
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                child: Row(
-                  children: <Widget>[
-                    Container(
-                      child: Text('Bolsa'),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.only(
-                          bottomLeft: Radius.circular(20),
-                          topLeft: Radius.circular(20),
-                          bottomRight: Radius.circular(200),
-                        )
-                      )
-                    ),
-                  ],
-                ),
-              ),
-            ),*/
             Padding(
               padding: const EdgeInsets.only(top: 20),
               child: Column(
@@ -270,39 +105,6 @@ class ViewBusca extends StatelessWidget{
                 ],
               ),
             ),
-            /*Padding(
-              padding: const EdgeInsets.only(top: 20),
-              child: Container(
-                height: 50.0,
-                width: 150.0,
-                decoration: BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(
-                      offset: Offset(0.0, 10.0),
-                      blurRadius: 10.0,
-                      color: Colors.black38
-                    )
-                  ],
-                  border: Border.all(color: Colors.green, width: 1.5),
-                  color: Colors.green[300],
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                child: Row(
-                  children: <Widget>[
-                    Container(
-                      child: Text('Acessório'),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.only(
-                          bottomLeft: Radius.circular(20),
-                          topLeft: Radius.circular(20),
-                          bottomRight: Radius.circular(200),
-                        )
-                      )
-                    ),
-                  ],
-                ),
-              ),
-            ),*/
             Padding(
               padding: const EdgeInsets.only(top: 20),
               child: Column(

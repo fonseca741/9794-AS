@@ -8,12 +8,8 @@ class ViewLogin extends StatefulWidget {
 
 class _ViewLoginState extends State<ViewLogin> {
   final _form = GlobalKey<FormState>();
-  //final Map<String, Object> _formData = {};
 
   void verificarLogin() {
-    // if (_form.currentState.validate()) {
-    //   Navigator.pushReplacementNamed(context, AppRoutes.HOME);
-    // }
     Navigator.pushReplacementNamed(context, AppRoutes.BARRA);
   }
 

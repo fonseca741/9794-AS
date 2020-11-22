@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:manter_produto/models/Produto.dart';
+import 'package:manter_produto/provider/produtos.dart';
+import 'package:provider/provider.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 
 class ViewCadastrarProduto extends StatefulWidget{
@@ -13,7 +15,7 @@ class _ViewCadastrarProdutoState extends State<ViewCadastrarProduto> {
   String _categoriaValor;
 
   final _form = GlobalKey<FormState>();
-  final Map<String, Object> _formData = {};
+  final Map<String, String> _formData = {};
 
   void loadFormData(Produto produto){
     if(produto != null){
@@ -23,7 +25,7 @@ class _ViewCadastrarProdutoState extends State<ViewCadastrarProduto> {
       _formData['Preço'] = produto.preco;
       _formData['Descrição'] = produto.descricao;
       _formData['Tamanhos'] = produto.tamanhos;
-      _formData['Foto'] = produto.foto;
+      //_formData['Foto'] = produto.foto;
     } 
   }
 
@@ -58,7 +60,7 @@ class _ViewCadastrarProdutoState extends State<ViewCadastrarProduto> {
                     ),
                     validator: (value) {
                     if(value == null || value.trim().isEmpty){
-                      return 'Ocorreu um erro';
+                      return 'Campo obrigatório';
                     }
                     return null;
                     },
@@ -103,7 +105,7 @@ class _ViewCadastrarProdutoState extends State<ViewCadastrarProduto> {
                     ),
                     validator: (value) {
                       if(value == null || value.trim().isEmpty){
-                        return 'Ocorreu um erro';
+                        return 'Campo obriagtório';
                       }
                       return null;
                     },
@@ -122,7 +124,7 @@ class _ViewCadastrarProdutoState extends State<ViewCadastrarProduto> {
                     ),
                     validator: (value) {
                       if(value == null || value.trim().isEmpty){
-                        return 'Ocorreu um erro';
+                        return 'Campo obrigatório';
                       }
                       return null;
                     },
@@ -141,7 +143,7 @@ class _ViewCadastrarProdutoState extends State<ViewCadastrarProduto> {
                     ),
                     validator: (value) {
                       if(value == null || value.trim().isEmpty){
-                        return 'Ocorreu um erro';
+                        return 'Campo obrigatório';
                       }
                       return null;
                     },
@@ -194,7 +196,22 @@ class _ViewCadastrarProdutoState extends State<ViewCadastrarProduto> {
                     padding: EdgeInsets.fromLTRB(20, 15, 20, 15),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20)),
-                    onPressed: () => {
+                    onPressed: () {
+                      final isValid = _form.currentState.validate();
+                      if(isValid){
+                        _form.currentState.save();
+                        Provider.of<Produtos>(context, listen: false).put(Produto(
+                          id: _formData['id'],
+                          nome: _formData['Nome'],
+                          categoria: _formData[''],
+                          preco: _formData['Preço'],
+                          descricao: _formData['Descrição'],
+                          tamanhos: _formData['Tamanhos'],
+                          //foto: _formData['Foto'],
+                        ));
+                        Navigator.of(context).pop();
+                      }
+                      /*
                       Alert(
                         context: context,
                         type: AlertType.success,
@@ -209,7 +226,7 @@ class _ViewCadastrarProdutoState extends State<ViewCadastrarProduto> {
                             width: 120,
                           )
                         ],
-                      ).show(),
+                      ).show();*/
                     },
                   ),
                 ),

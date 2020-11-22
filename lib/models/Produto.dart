@@ -7,7 +7,6 @@ class Produto{
   final String preco;
   final String descricao;
   final String tamanhos;
-  final String foto;
 
   const Produto({
     this.id,
@@ -16,6 +15,5 @@ class Produto{
     @required this.preco,
     @required this.descricao,
     @required this.tamanhos,
-    @required this.foto,
   });
 }

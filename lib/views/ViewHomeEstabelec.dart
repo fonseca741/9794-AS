@@ -28,16 +28,6 @@ class _ViewHomeState extends State<ViewHomeEstabelec> {
             ),
             label: 'Produto',
           ),
-          /*BottomNavigationBarItem(
-            icon: Icon(
-              Icons.search,
-            ),
-            label: 'Procurar',
-          ),
-          BottomNavigationBarItem(
-            icon: FaIcon(FontAwesomeIcons.clipboardList),
-            label: 'Pedidos',
-          ),*/
           BottomNavigationBarItem(
             icon: Icon(
               Icons.account_circle,

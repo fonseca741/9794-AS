@@ -34,7 +34,6 @@ class Produtos with ChangeNotifier{
         preco: produto.preco,
         descricao: produto.descricao,
         tamanhos: produto.tamanhos,
-        foto: produto.foto,
       ));
     }
     else{
@@ -46,7 +45,6 @@ class Produtos with ChangeNotifier{
       preco: produto.preco,
       descricao: produto.descricao,
       tamanhos: produto.tamanhos,
-      foto: produto.foto
     ));
     }    
 

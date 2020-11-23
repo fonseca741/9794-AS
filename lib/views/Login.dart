@@ -8,13 +8,18 @@ class ViewLogin extends StatefulWidget {
 
 class _ViewLoginState extends State<ViewLogin> {
   final _form = GlobalKey<FormState>();
-  //final Map<String, Object> _formData = {};
+  final Map<String, String> _formData = {};
 
   void verificarLogin() {
-    // if (_form.currentState.validate()) {
-    //   Navigator.pushReplacementNamed(context, AppRoutes.HOME);
-    // }
-    Navigator.pushReplacementNamed(context, AppRoutes.HOME);
+    _form.currentState.save();
+    if (_form.currentState.validate()) {
+      _form.currentState.reset();
+      if (_formData['email'].contains('@user')) {
+        Navigator.pushReplacementNamed(context, AppRoutes.HOME);
+      } else {
+        Navigator.pushReplacementNamed(context, AppRoutes.HOME_ESTABELECIMENTO);
+      }
+    }
   }
 
   @override
@@ -46,6 +51,9 @@ class _ViewLoginState extends State<ViewLogin> {
                       return 'Insira um email válido';
                     }
                     return null;
+                  },
+                  onSaved: (value) {
+                    _formData['email'] = value;
                   },
                 ),
               ),

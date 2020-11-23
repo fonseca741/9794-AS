@@ -4,7 +4,7 @@ const PEDIDOS = {
   '1': const Pedido(
     id: '1',
     nomeUsuario: 'Roberto de Assis',
-    produtoCompra: ['Camisa do Homem Aranha', 'Fronha do Batman'],
+    produtosCompra: ['Camisa do Homem Aranha', 'Fronha do Batman'],
     estabelecimentoCompra: 'Mega HQ',
     valorPedido: '149,90',
     formaEntrega: 'Entrega na Residencia',
@@ -14,7 +14,7 @@ const PEDIDOS = {
   '2': const Pedido(
     id: '2',
     nomeUsuario: 'Gustavo da Silva',
-    produtoCompra: ['Shorts Stylish', 'Meia Três Quartos'],
+    produtosCompra: ['Shorts Stylish', 'Meia Três Quartos'],
     estabelecimentoCompra: 'Estilo do Homem',
     valorPedido: '99,90',
     formaEntrega: 'Entrega na Residencia',
@@ -24,7 +24,7 @@ const PEDIDOS = {
   '3': const Pedido(
     id: '3',
     nomeUsuario: 'Amanda Rodrigues',
-    produtoCompra: ['Vestido longo', 'Blusinha Florida', 'Shorts barra alta'],
+    produtosCompra: ['Vestido longo', 'Blusinha Florida', 'Shorts barra alta'],
     estabelecimentoCompra: 'Channel',
     valorPedido: '500,90',
     formaEntrega: 'Entrega na Residencia',

@@ -1,3 +1,4 @@
+import 'dart:math';
 import 'dart:ui';
 import 'package:flutter_tagging/flutter_tagging.dart';
 import 'package:iclothes/routes/app_routes.dart';
@@ -22,7 +23,7 @@ class _ViewCadastroEstabelecimentoAdicionalState
 
   void loadFormData(Estabelecimento estab) {
     if (estab != null) {
-      _formData['id'] = '25';
+      _formData['id'] = Random().nextInt(100).toString();
       _formData['nome'] = estab.nome;
       _formData['desc'] = estab.descricao;
       _formData['urlFoto'] = estab.urlFoto;
@@ -45,17 +46,17 @@ class _ViewCadastroEstabelecimentoAdicionalState
       });
       _formData['categ'] = categ;
       Estabelecimento estab = Estabelecimento(
-        id: _formData['id'],
-        nome: _formData['nome'],
-        descricao: _formData['desc'],
-        urlFoto: _formData['urlFoto'],
-        telefone: _formData['tel'],
-        endereco: _formData['end'],
-        email: _formData['email'],
-        senha: _formData['senha'],
-        cnpj: _formData['cnpj'],
-        categorias: _formData['categ'],
-        regraEstabelecimento: _formData['regra'],
+        _formData['id'],
+        _formData['nome'],
+        _formData['desc'],
+        _formData['urlFoto'],
+        _formData['tel'],
+        _formData['end'],
+        _formData['email'],
+        _formData['senha'],
+        _formData['cnpj'],
+        _formData['categ'],
+        _formData['regra'],
       );
       Provider.of<ProviderEstabelecimentos>(context, listen: false).put(estab);
       Alert(
@@ -72,7 +73,6 @@ class _ViewCadastroEstabelecimentoAdicionalState
             onPressed: () => {
               Navigator.pop(context),
               Navigator.of(context).pushReplacementNamed(AppRoutes.LOGIN),
-              print(estab.getInfo())
             },
             width: 120,
           )
@@ -130,12 +130,14 @@ class _ViewCadastroEstabelecimentoAdicionalState
               Padding(
                 padding: EdgeInsets.only(top: 16.0),
                 child: TextFormField(
+                  maxLines: 10,
                   keyboardType: TextInputType.multiline,
                   decoration: InputDecoration(
                       labelText: 'Regras do Estabelecimento (Devolução)',
                       border: new OutlineInputBorder(
                           borderRadius: const BorderRadius.all(
-                              const Radius.circular(20)))),
+                              const Radius.circular(20))),
+                      alignLabelWithHint: true),
                   validator: (value) {
                     if (value.trim().isEmpty) {
                       return 'Insira as regras do Estabelecimento';

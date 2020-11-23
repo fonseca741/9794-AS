@@ -36,17 +36,17 @@ class _ViewCadastroEstabelecimentoState
     if (_form.currentState.validate()) {
       _form.currentState.save();
       Estabelecimento estab = Estabelecimento(
-        id: _formData['id'],
-        nome: _formData['nome'],
-        descricao: _formData['desc'],
-        urlFoto: '',
-        telefone: _formData['tel'],
-        endereco: _formData['end'],
-        email: _formData['email'],
-        senha: _formData['senha'],
-        cnpj: _formData['cnpj'],
-        categorias: [''],
-        regraEstabelecimento: '',
+        _formData['id'],
+        _formData['nome'],
+        _formData['desc'],
+        '',
+        _formData['tel'],
+        _formData['end'],
+        _formData['email'],
+        _formData['senha'],
+        _formData['cnpj'],
+        [''],
+        '',
       );
       Navigator.of(context).pushNamed(
           AppRoutes.CADASTRO_ESTABELECIMENTO_ADICIONAL,

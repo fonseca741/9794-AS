@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class Pedido {
   final String id;
   final String nomeUsuario;
-  final List<String> produtoCompra;
+  final List<String> produtosCompra;
   final String estabelecimentoCompra;
   final String valorPedido;
   final String formaEntrega;
@@ -13,7 +13,7 @@ class Pedido {
   const Pedido({
     this.id,
     @required this.nomeUsuario,
-    @required this.produtoCompra,
+    @required this.produtosCompra,
     @required this.estabelecimentoCompra,
     @required this.valorPedido,
     @required this.formaEntrega,

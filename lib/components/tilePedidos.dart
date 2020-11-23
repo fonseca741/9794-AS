@@ -39,8 +39,6 @@ class TilePedido extends StatelessWidget {
             color: Colors.blueGrey,
           ),
           onPressed: () => {}),
-      //TODO: juntar com a tela de pedidos do Pedro
-      //onTap: () => {Navigator.of(context).pushNamed(AppRoutes.PEDIDOS, arguments: pedido)},
     );
   }
 }

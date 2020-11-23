@@ -106,27 +106,6 @@ class ViewCadastroUsuario extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(top: 16.0),
                   child: TextFormField(
-                    initialValue: _formData['end'],
-                    keyboardType: TextInputType.text,
-                    decoration: InputDecoration(
-                        labelText: 'Endereço',
-                        border: new OutlineInputBorder(
-                            borderRadius: const BorderRadius.all(
-                                const Radius.circular(20)))),
-                    validator: (value) {
-                      if (value.trim().isEmpty) {
-                        return 'O campo endereço é obrigatorio';
-                      }
-                      return null;
-                    },
-                    onSaved: (value) {
-                      _formData['end'] = value;
-                    },
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 16.0),
-                  child: TextFormField(
                     initialValue: _formData['senha'],
                     keyboardType: TextInputType.text,
                     obscureText: true,
@@ -166,7 +145,6 @@ class ViewCadastroUsuario extends StatelessWidget {
                           _formData['email'],
                           _formData['tel'],
                           _formData['cpf'],
-                          _formData['end'],
                           _formData['senha'],
                         );
                         Alert(

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:iClothes/Models/cartao.dart';
+import 'package:iClothes/Provider/providerCartao.dart';
+import 'package:provider/provider.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 
 class ViewCadastroCartao extends StatelessWidget {
@@ -138,13 +140,16 @@ class ViewCadastroCartao extends StatelessWidget {
                 onPressed: () => {
                   if (_form.currentState.validate())
                     {
-                      Cartao(
-                        //instanciação do novo cartão para futuras operações
-                        _formData['numero'],
-                        _formData['titular'],
-                        _formData['validade'],
-                        _formData['cvv'],
-                        _formData['cpf'],
+                      _form.currentState.save(),
+                      Provider.of<ProviderCartao>(context, listen: false).put(
+                        Cartao(
+                          //instanciação do novo cartão para futuras operações
+                          _formData['numero'],
+                          _formData['titular'],
+                          _formData['validade'],
+                          _formData['cvv'],
+                          _formData['cpf'],
+                        ),
                       ),
                       Alert(
                         context: context,
@@ -159,7 +164,7 @@ class ViewCadastroCartao extends StatelessWidget {
                             ),
                             onPressed: () => {
                               Navigator.pop(context),
-                              // Navigator.of(context).pushReplacementNamed(AppRoutes.LOGIN)
+                              Navigator.pop(context),
                             },
                             width: 120,
                           )

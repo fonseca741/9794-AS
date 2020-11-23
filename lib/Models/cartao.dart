@@ -1,11 +1,11 @@
 class Cartao {
-  String numero;
-  String titular;
-  String validade;
-  String cvv;
-  String cpf;
+  final String numero;
+  final String titular;
+  final String validade;
+  final String cvv;
+  final String cpf;
 
-  Cartao(
+  const Cartao(
     this.numero,
     this.titular,
     this.validade,

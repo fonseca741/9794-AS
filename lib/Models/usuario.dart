@@ -6,13 +6,11 @@ class Usuario {
   final String email;
   final String telefone;
   final String cpf;
-  final String endereco;
   final String senha;
   final List<Cartao> cartoes = new List();
   final List<Endereco> enderecos = new List();
 
-  Usuario(this.nome, this.email, this.telefone, this.cpf, this.endereco,
-      this.senha);
+  Usuario(this.nome, this.email, this.telefone, this.cpf, this.senha);
 
   @override
   String toString() {

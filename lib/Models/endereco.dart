@@ -1,11 +1,11 @@
 class Endereco {
-  String apelido;
-  String rua;
-  String numero;
-  String complemento;
-  String cidade;
-  String uf;
+  final String apelido;
+  final String rua;
+  final String numero;
+  final String complemento;
+  final String cidade;
+  final String uf;
 
-  Endereco(this.apelido, this.rua, this.numero, this.complemento, this.cidade,
-      this.uf);
+  const Endereco(this.apelido, this.rua, this.numero, this.complemento,
+      this.cidade, this.uf);
 }

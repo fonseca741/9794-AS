@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:iClothes/Provider/providerCartao.dart';
 import 'package:iClothes/Routes/app_routes.dart';
 import 'package:iClothes/Views/alterarSenha.dart';
 import 'package:iClothes/Views/cadastroCartao.dart';
 import 'package:iClothes/Views/cadastroUsuario.dart';
 import 'package:iClothes/Views/gerarRealtorio.dart';
 import 'package:iClothes/Views/homeEstabelecimento.dart';
+import 'package:iClothes/Views/listaCartoes.dart';
+import 'package:iClothes/Views/listaEndereco.dart';
 import 'package:iClothes/Views/perfil.dart';
+import 'package:provider/provider.dart';
+import 'Provider/providerEndereco.dart';
 import 'Views/cadastroEndereco.dart';
 import 'Views/excluirConta.dart';
 import 'Views/faq.dart';
@@ -22,24 +27,36 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        title: 'iClothes',
-        theme: ThemeData(
-          primaryColor: Color(0xff1d3557),
-          visualDensity: VisualDensity.adaptivePlatformDensity,
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (context) => ProviderCartao(),
         ),
-        routes: {
-          AppRoutes.INFO_PESSOAIS: (_) => ViewInfoPessoais(),
-          AppRoutes.FAQ: (_) => ViewFaq(),
-          AppRoutes.SAC: (_) => ViewSac(),
-          AppRoutes.CADASTRO_USUARIO: (_) => ViewCadastroUsuario(),
-          AppRoutes.HOME_ESTABELECIMENTO: (_) => ViewHomeEstabelecimento(),
-          AppRoutes.PERFIL: (_) => ViewPerfil(),
-          AppRoutes.ALTERAR_SENHA: (_) => ViewAlterarSenha(),
-          AppRoutes.GERAR_RELATORIO: (_) => ViewGerarRelatorio(),
-          AppRoutes.CADASTRO_CARTAO: (_) => ViewCadastroCartao(),
-          AppRoutes.CADASTRO_ENDERECO: (_) => ViewCadastroEndereco(),
-          AppRoutes.EXCLUIR_CONTA: (_) => ViewExcluirConta(),
-        });
+        ChangeNotifierProvider(
+          create: (context) => ProviderEndereco(),
+        )
+      ],
+      child: MaterialApp(
+          title: 'iClothes',
+          theme: ThemeData(
+            primaryColor: Color(0xff1d3557),
+            visualDensity: VisualDensity.adaptivePlatformDensity,
+          ),
+          routes: {
+            AppRoutes.INFO_PESSOAIS: (_) => ViewInfoPessoais(),
+            AppRoutes.FAQ: (_) => ViewFaq(),
+            AppRoutes.SAC: (_) => ViewSac(),
+            AppRoutes.CADASTRO_USUARIO: (_) => ViewCadastroUsuario(),
+            AppRoutes.HOME_ESTABELECIMENTO: (_) => ViewHomeEstabelecimento(),
+            AppRoutes.PERFIL: (_) => ViewPerfil(),
+            AppRoutes.ALTERAR_SENHA: (_) => ViewAlterarSenha(),
+            AppRoutes.GERAR_RELATORIO: (_) => ViewGerarRelatorio(),
+            AppRoutes.CADASTRO_CARTAO: (_) => ViewCadastroCartao(),
+            AppRoutes.CADASTRO_ENDERECO: (_) => ViewCadastroEndereco(),
+            AppRoutes.EXCLUIR_CONTA: (_) => ViewExcluirConta(),
+            AppRoutes.LISTA_CARTOES: (_) => ViewListaCartoes(),
+            AppRoutes.LISTA_ENDERECOS: (_) => ViewListaEnderecos(),
+          }),
+    );
   }
 }

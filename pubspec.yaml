@@ -23,6 +23,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  provider:
   dependencies:
   intl: ^0.15.7
   rflutter_alert: ^1.1.0

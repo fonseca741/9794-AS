@@ -41,35 +41,36 @@ class ViewInfoPessoais extends StatelessWidget {
               // onTap: () => {}
             ),
             ListTile(
-              leading: Icon(
-                Icons.credit_card,
-                size: 35,
-                color: Colors.blueGrey,
-              ),
-              title: Text('Cartões', style: TextStyle(fontSize: 18)),
-              subtitle:
-                  Text('Gerencie seus cartões', style: TextStyle(fontSize: 16)),
-              trailing: Icon(
-                Icons.arrow_forward_ios,
-                size: 20,
-              ),
-              // onTap: () => {}
-            ),
+                leading: Icon(
+                  Icons.credit_card,
+                  size: 35,
+                  color: Colors.blueGrey,
+                ),
+                title: Text('Cartões', style: TextStyle(fontSize: 18)),
+                subtitle: Text('Gerencie seus cartões',
+                    style: TextStyle(fontSize: 16)),
+                trailing: Icon(
+                  Icons.arrow_forward_ios,
+                  size: 20,
+                ),
+                onTap: () =>
+                    {Navigator.of(context).pushNamed(AppRoutes.LISTA_CARTOES)}),
             ListTile(
-              leading: Icon(
-                Icons.edit_location,
-                size: 35,
-                color: Colors.blueGrey,
-              ),
-              title: Text('Endereços', style: TextStyle(fontSize: 18)),
-              subtitle: Text('Meus endereços de entrega',
-                  style: TextStyle(fontSize: 16)),
-              trailing: Icon(
-                Icons.arrow_forward_ios,
-                size: 20,
-              ),
-              // onTap: () => {}
-            ),
+                leading: Icon(
+                  Icons.edit_location,
+                  size: 35,
+                  color: Colors.blueGrey,
+                ),
+                title: Text('Endereços', style: TextStyle(fontSize: 18)),
+                subtitle: Text('Meus endereços de entrega',
+                    style: TextStyle(fontSize: 16)),
+                trailing: Icon(
+                  Icons.arrow_forward_ios,
+                  size: 20,
+                ),
+                onTap: () => {
+                      Navigator.of(context).pushNamed(AppRoutes.LISTA_ENDERECOS)
+                    }),
             ListTile(
               leading: Icon(
                 Icons.chat_outlined,

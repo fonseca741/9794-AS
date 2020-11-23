@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:iClothes/Models/endereco.dart';
+import 'package:iClothes/Provider/providerEndereco.dart';
+import 'package:provider/provider.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 
 class ViewCadastroEndereco extends StatefulWidget {
@@ -203,15 +205,19 @@ class _ViewCadastroEnderecoState extends State<ViewCadastroEndereco> {
                     borderRadius: BorderRadius.circular(20)),
                 onPressed: () {
                   if (_form.currentState.validate() && _uf.length != 0) {
-                    Endereco(
-                      //instanciação do novo usuário para futuras operações
-                      _formData['apelido'],
-                      _formData['cidade'],
-                      _formData['uf'],
-                      _formData['rua'],
-                      _formData['complemento'],
-                      _formData['numero'],
+                    _form.currentState.save();
+                    Provider.of<ProviderEndereco>(context, listen: false).put(
+                      Endereco(
+                        //instanciação do novo usuário para futuras operações
+                        _formData['apelido'],
+                        _formData['rua'],
+                        _formData['numero'],
+                        _formData['complemento'],
+                        _formData['cidade'],
+                        _formData['uf'],
+                      ),
                     );
+
                     Alert(
                       context: context,
                       type: AlertType.success,
@@ -224,7 +230,7 @@ class _ViewCadastroEnderecoState extends State<ViewCadastroEndereco> {
                           ),
                           onPressed: () => {
                             Navigator.pop(context),
-                            // Navigator.of(context).pushReplacementNamed(AppRoutes.LOGIN)
+                            Navigator.pop(context),
                           },
                           width: 120,
                         )

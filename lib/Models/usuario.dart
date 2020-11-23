@@ -1,16 +1,17 @@
 import 'package:iClothes/Models/cartao.dart';
 import 'package:iClothes/Models/endereco.dart';
 
-class Usuario {
-  final String nome;
-  final String email;
-  final String telefone;
+import 'cliente.dart';
+
+class Usuario extends Cliente {
   final String cpf;
-  final String senha;
   final List<Cartao> cartoes = new List();
   final List<Endereco> enderecos = new List();
 
-  Usuario(this.nome, this.email, this.telefone, this.cpf, this.senha);
+  Usuario(String nome, String email, String telefone, String senha, this.cpf)
+      : super(nome, email, telefone, senha);
+
+  // Usuario(this.nome, this.email, this.telefone, this.cpf, this.senha);
 
   @override
   String toString() {

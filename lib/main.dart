@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
           visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       routes:{
-        AppRoutes.HOME:(_) => Ajuda(),
+        AppRoutes.HOME:(_) => PedidoLista(),
 
       } ,
       

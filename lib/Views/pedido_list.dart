@@ -68,7 +68,24 @@ class _PedidoListaState extends State<PedidoLista> {
                       });
                     }
                   ),
-                    Text('Pagamento na entrega'),
+                    Text('Pagamento na entrega (dinheiro)'),
+              ]
+            )
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 20), 
+              child: Row(
+                children: <Widget>[
+                  Checkbox(
+                    value: checkBoxValue,
+                
+                    onChanged: (bool value){
+                      setState((){
+                      checkBoxValue = value;
+                      });
+                    }
+                  ),
+                    Text('Pagamento na entrega (cartão)'),
               ]
             )
           ),
@@ -85,7 +102,7 @@ class _PedidoListaState extends State<PedidoLista> {
                       });
                     }
                   ),
-                    Text('Pagamento no Cartão'),
+                    Text('Pagamento no Cartão Online'),
               ]
             )
           ),

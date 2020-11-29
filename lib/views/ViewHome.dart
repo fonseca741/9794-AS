@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:manter_produto/views/ViewBusca.dart';
-import 'package:manter_produto/views/ViewListProduto.dart';
-
+import 'package:manter_produto/views/ViewDetalheNotificacao3.dart';
+import 'package:manter_produto/views/ViewInfoPessoais.dart';
+import 'package:manter_produto/views/ViewListaPedidos.dart';
 
 class ViewHome extends StatefulWidget {
   @override
@@ -13,8 +14,10 @@ class _ViewHomeState extends State<ViewHome> {
   int _currentIndex = 0;
 
   final List<Widget> _children = [
-    ViewListProduto(),
-    ViewBusca()
+    ViewDetalheNotificacao3(),
+    ViewBusca(),
+    ViewListaPedidos(),
+    ViewInfoPessoais(),
   ];
 
   @override

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:manter_produto/views/ViewBusca.dart';
 import 'package:manter_produto/views/ViewListProduto.dart';
 
 class ViewHomeEstabelec extends StatefulWidget {
@@ -13,7 +12,6 @@ class _ViewHomeState extends State<ViewHomeEstabelec> {
 
   final List<Widget> _children = [
     ViewListProduto(),
-    ViewBusca()
   ];
 
   @override

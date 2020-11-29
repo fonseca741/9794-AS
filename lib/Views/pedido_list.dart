@@ -13,6 +13,7 @@ class PedidoLista extends StatefulWidget{
 class _PedidoListaState extends State<PedidoLista> {
   bool checkBoxValue = false;
   bool checkBoxValue1 = false;
+  bool checkBoxValue2 = false;
 
   @override
   Widget build(BuildContext context) {
@@ -77,11 +78,11 @@ class _PedidoListaState extends State<PedidoLista> {
               child: Row(
                 children: <Widget>[
                   Checkbox(
-                    value: checkBoxValue,
+                    value: checkBoxValue1,
                 
                     onChanged: (bool value){
                       setState((){
-                      checkBoxValue = value;
+                      checkBoxValue1 = value;
                       });
                     }
                   ),
@@ -94,11 +95,11 @@ class _PedidoListaState extends State<PedidoLista> {
               child: Row(
                 children: <Widget>[
                   Checkbox(
-                    value: checkBoxValue1,
+                    value: checkBoxValue2,
                 
                     onChanged: (bool value){
                       setState((){
-                      checkBoxValue1 = value;
+                      checkBoxValue2 = value;
                       });
                     }
                   ),

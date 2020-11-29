@@ -1,23 +1,23 @@
 import 'package:flutter/material.dart';
 
-class Pedido {
+class Pedidos {
   final String id;
-  final String nomeUsuarios;
-  final String produtoCompra;
+  final String nomeUsuario;
+  final List<String> produtosCompra;
   final String estabelecimentoCompra;
-  final String valorProduto;
+  final String valorPedido;
   final String formaEntrega;
   final String formaPagamento;
   final String dataCompra;
-  
-  const Pedido({
+
+  const Pedidos({
     this.id,
-    @required this.nomeUsuarios,
-    @required this.produtoCompra,
+    @required this.nomeUsuario,
+    @required this.produtosCompra,
     @required this.estabelecimentoCompra,
-    @required this.valorProduto,
+    @required this.valorPedido,
     @required this.formaEntrega,
     @required this.formaPagamento,
-    @required this.dataCompra, 
+    @required this.dataCompra,
   });
 }

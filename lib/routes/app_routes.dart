@@ -7,4 +7,7 @@ class AppRoutes{
   static const BARRA = '/barra';
   static const NOTI = '/notificacoes';
   static const DEVOLUCAO = '/devolucao';
+  static const DEVEST1 = '/devest1';
+  static const DEVEST2 = '/devest2';
+  static const DEVEST3 = '/devest3';
 }

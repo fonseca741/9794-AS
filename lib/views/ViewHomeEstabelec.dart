@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:manter_produto/views/ViewDevolEstab.dart';
 import 'package:manter_produto/views/ViewListProduto.dart';
 
 class ViewHomeEstabelec extends StatefulWidget {
@@ -12,6 +13,7 @@ class _ViewHomeState extends State<ViewHomeEstabelec> {
 
   final List<Widget> _children = [
     ViewListProduto(),
+    ViewDevolEstab(),
   ];
 
   @override
@@ -25,6 +27,16 @@ class _ViewHomeState extends State<ViewHomeEstabelec> {
               FontAwesomeIcons.barcode,
             ),
             label: 'Produto',
+          ),
+          BottomNavigationBarItem(
+            icon: FaIcon(
+              FontAwesomeIcons.exchangeAlt,
+            ),
+            label: 'Devolução',
+          ),
+          BottomNavigationBarItem(
+            icon: FaIcon(FontAwesomeIcons.clipboardList),
+            label: 'Pedidos',
           ),
           BottomNavigationBarItem(
             icon: Icon(

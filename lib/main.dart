@@ -7,6 +7,9 @@ import 'package:manter_produto/views/ViewCadastrarProduto.dart';
 import 'package:manter_produto/views/ViewDetalheNotificacao.dart';
 import 'package:manter_produto/views/ViewDetalheNotificacao2.dart';
 import 'package:manter_produto/views/ViewDetalheNotificacao3.dart';
+import 'package:manter_produto/views/ViewDevEst1.dart';
+import 'package:manter_produto/views/ViewDevEst2.dart';
+import 'package:manter_produto/views/ViewDevEst3.dart';
 import 'package:manter_produto/views/ViewDevolucao.dart';
 import 'package:manter_produto/views/ViewHome.dart';
 import 'package:manter_produto/views/ViewHomeEstabelec.dart';
@@ -55,6 +58,9 @@ class _MyAppState extends State<MyApp> {
           AppRoutes.DETALHES_NOTI3: (_) => ViewDetalheNotificacao3(),
           AppRoutes.NOTI: (_) => ViewNotificacoes(),
           AppRoutes.DEVOLUCAO: (_) => ViewDevolucao(),
+          AppRoutes.DEVEST1: (_) => ViewDevEst1(),
+          AppRoutes.DEVEST2: (_) => ViewDevEst2(),
+          AppRoutes.DEVEST3: (_) => ViewDevEst3(),
         },
       ),
     );

@@ -58,6 +58,10 @@ class _PedidoListaState extends State<PedidoLista> {
           ),
           Padding(
             padding: const EdgeInsets.only(top: 40), 
+            child: Text('Escolha apenas uma opção de compra abaixo', style: TextStyle(fontSize: 16)),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 15), 
               child: Row(
                 children: <Widget>[
                   Checkbox(

@@ -30,23 +30,23 @@ class Ajuda extends StatelessWidget{
           Padding(padding: const EdgeInsets.all(20) 
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 40), 
+            padding: const EdgeInsets.only(top: 30), 
             child: Text('Para obermos mais acessibilidade à todos o sistema tem suporte para deficientes visuais!', style: TextStyle(fontSize: 20)),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 40), 
+            padding: const EdgeInsets.only(top: 30), 
             child: Text('O Sistema conta com narração automática da tela e auxílio na maioria das funções do aplicativo', style: TextStyle(fontSize: 20)),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 40), 
+            padding: const EdgeInsets.only(top: 30), 
             child: Text('Aperte o botão Abaixo para Iniciar O Processo', style: TextStyle(fontSize: 20)),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 40),
+            padding: const EdgeInsets.only(top: 30),
             child: Icon(Icons.audiotrack,color: Colors.green[300], size: 50,),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 70.0),
+            padding: const EdgeInsets.only(top: 30.0),
               child: RaisedButton(
                 child: Text(
                    'Começar a Utilizar o Processo',
@@ -62,6 +62,37 @@ class Ajuda extends StatelessWidget{
                         context: context,
                         type: AlertType.success,
                         title: "Iniciou o Processo com Sucesso!",
+                        buttons: [
+                          DialogButton(
+                            child: Text(
+                              "OK",
+                              style: TextStyle(color: Colors.white, fontSize: 20),
+                            ),
+                            onPressed: () => Navigator.pop(context),
+                            width: 120,
+                          )
+                        ],
+                      ).show(),
+                    },
+               ),
+           ),
+           Padding(
+            padding: const EdgeInsets.only(top: 15.0),
+              child: RaisedButton(
+                child: Text(
+                   'Pare de Utilizar o Processo',
+                   style: TextStyle(fontSize: 22),
+                    ),
+                    textColor: Colors.white,
+                    color: Color.fromRGBO(95, 140, 245, 1),
+                    padding: EdgeInsets.fromLTRB(20, 15, 20, 15),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20)),
+                    onPressed: () => {
+                      Alert(
+                        context: context,
+                        type: AlertType.success,
+                        title: "Parou o Processo com Sucesso!",
                         buttons: [
                           DialogButton(
                             child: Text(

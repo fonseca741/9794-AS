@@ -14,7 +14,6 @@ import 'package:projeto1/Views/viewDevolucao.dart';
 import 'package:projeto1/provider/pedido.dart';
 import 'package:projeto1/provider/providerPedidos.dart';
 import 'package:provider/provider.dart';
-
 import 'Routes/app_Routes.dart';
 import 'Views/ViewDevolEstab2.dart';
 import 'Views/ViewHomeEstabelec.dart';
@@ -46,10 +45,10 @@ class MyApp extends StatelessWidget {
           visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       routes:{
-        //AppRoutes.HOME:(_) => PedidoLista(), 
+        AppRoutes.HOME:(_) => PedidoLista(), 
         //AppRoutes.BE:(_) =>  ViewHomeEstabelec(),      
-        AppRoutes.HOME:(_) => ViewLogin(),
-        AppRoutes.BE:(_) => ViewHome(),
+        //AppRoutes.HOME:(_) => ViewLogin(),
+        //AppRoutes.BE:(_) => ViewHome(),
         AppRoutes.AJUDA:(_) => Ajuda(),
         AppRoutes.DEVOLUCAO:(_) => ViewDevolucao(),
         AppRoutes.CHAT:(_) => Chat(),

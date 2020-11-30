@@ -25,7 +25,6 @@ class _ViewCadastrarProdutoState extends State<ViewCadastrarProduto> {
       _formData['Preço'] = produto.preco;
       _formData['Descrição'] = produto.descricao;
       _formData['Tamanhos'] = produto.tamanhos;
-      //_formData['Foto'] = produto.foto;
     } 
   }
 
@@ -203,15 +202,11 @@ class _ViewCadastrarProdutoState extends State<ViewCadastrarProduto> {
                         Provider.of<Produtos>(context, listen: false).put(Produto(
                           id: _formData['id'],
                           nome: _formData['Nome'],
-                          categoria: _formData[''],
+                          categoria: _categoriaValor,
                           preco: _formData['Preço'],
                           descricao: _formData['Descrição'],
                           tamanhos: _formData['Tamanhos'],
-                          //foto: _formData['Foto'],
                         ));
-                        Navigator.of(context).pop();
-                      }
-                      /*
                       Alert(
                         context: context,
                         type: AlertType.success,
@@ -222,11 +217,13 @@ class _ViewCadastrarProdutoState extends State<ViewCadastrarProduto> {
                               "OK",
                               style: TextStyle(color: Colors.white, fontSize: 20),
                             ),
-                            onPressed: () => Navigator.pop(context),
+                            onPressed: () => Navigator.of(context).pop(),
                             width: 120,
                           )
                         ],
-                      ).show();*/
+                      ).show();
+                      }
+                      
                     },
                   ),
                 ),

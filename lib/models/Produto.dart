@@ -11,7 +11,7 @@ class Produto{
   const Produto({
     this.id,
     @required this.nome,
-    @required this.categoria,
+    this.categoria,
     @required this.preco,
     @required this.descricao,
     @required this.tamanhos,
